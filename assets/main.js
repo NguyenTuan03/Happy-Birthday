@@ -66,7 +66,7 @@ function createRain()
         intro.appendChild(div);
     }
 }
-// birthday card
+//Birthday Card
 function birthdayCard()
 {
     var lineDecorLeft = document.querySelector('.line-decor--left');
@@ -337,7 +337,6 @@ function birthdayCard()
         cake();
     }
 }
-// birthdayCard();
 //Cake
 function cake()
 {   
@@ -486,7 +485,6 @@ function cake()
             }, 3000);
         }
 }
-// cake();
 //LaunchRocket
 function LaunchRocket()
 {
@@ -575,7 +573,6 @@ function LaunchRocket()
     }
         
 }
-// LaunchRocket()
 //Form
 function formvalidate()
 {

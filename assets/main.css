@@ -11,14 +11,13 @@ and (-webkit-device-pixel-ratio: 2) {
         font-family: 'Times New Roman', Times, serif;
     }
     body {
-        max-height: 896px;
         background-color: #7F669D;
         overflow: hidden;
     }
     .contain {
         overflow: hidden;
         position: relative;
-        height: 896px;
+        height: 690px;
     }
     .btn {
         width: 80%;
