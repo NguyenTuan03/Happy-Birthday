@@ -17,7 +17,7 @@ and (-webkit-device-pixel-ratio: 2) {
     .contain {
         overflow: hidden;
         position: relative;
-        height: 690px;
+        height: 700px;
     }
     .btn {
         width: 80%;
