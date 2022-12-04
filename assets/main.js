@@ -16,8 +16,8 @@ var blursArray = ['1px','4px'];// Lấy dộ mờ
 var colorsArray = ['#FBFACD','orange','#00E7FF'];
 var width = document.documentElement.clientWidth;
 var height = document.documentElement.clientHeight;
-var count = 40;
-var count1 = 40;
+var count = 70;
+var count1 = 70;
 function star()
 {
     for (var i=0;i<count1;i++)
@@ -73,6 +73,7 @@ function birthdayCard()
     var triangleLeft1 = document.querySelector('.triangle--left1');
     var triangleLeft2 = document.querySelector('.triangle--left2');
     var triangleLeft3 = document.querySelector('.triangle--left3');
+    var triangleLeft4 = document.querySelector('.triangle--left4');
     var lineDecorRight = document.querySelector('.line-decor--right');
     var triangleRight1 = document.querySelector('.triangle--right1');
     var triangleRight2 = document.querySelector('.triangle--right2');
@@ -153,6 +154,11 @@ function birthdayCard()
             height:0,
             opacity:0,
         })
+        .to(triangleLeft4,0.3,{
+            y:-10,
+            height:0,
+            opacity:0,
+        })
         .to(triangleRight1,0.3,{
             y:-10,
             height:0,
@@ -193,6 +199,11 @@ function birthdayCard()
             y:0,
             height:20
         })
+        .to(triangleLeft4,0.3,{
+            y:0,
+            height:20,
+            opacity:1,
+        })
         .to(lineDecorRight,0.5,{
             opacity:1,
             y:0,
@@ -220,22 +231,22 @@ function birthdayCard()
         })
         .to(birthdayImg1,0.5,{
             opacity:1,
-            width:120,
+            width:156,
             delay:1,
         })
         .to(birthdayImgPic1,0.5,{
             opacity:1,
-            width:112,
+            width:148,
             delay:1
         })
         .to(birthdayImg2,0.5,{
             opacity:1,
-            width:120,
+            width:156,
             delay:1,
         })
         .to(birthdayImgPic2,0.5,{
             opacity:1,
-            width:112,
+            width:148,
             delay:1
         })
         .to(birthdayIcon,0.8,{
@@ -297,7 +308,7 @@ function birthdayCard()
             birthdaytext12.style.display = 'block'
             birthdaytext13.style.display = 'block'
             showText();
-        },6000)
+        },8000)
         setTimeout(()=>{
             document.querySelector('.birthday-heart').style.display = 'block';
         },8000)
@@ -326,6 +337,7 @@ function birthdayCard()
         cake();
     }
 }
+// birthdayCard();
 //Cake
 function cake()
 {   
@@ -474,6 +486,7 @@ function cake()
             }, 3000);
         }
 }
+// cake();
 //LaunchRocket
 function LaunchRocket()
 {
@@ -514,8 +527,8 @@ function LaunchRocket()
                 delay:1
             })
             .to(dreamMsg,1,{
-                x:-20,
-                y:40,
+                x:-140,
+                y:48,
                 width:0,
             })
             .to(dreamMsg,0.5,{
@@ -523,13 +536,13 @@ function LaunchRocket()
                 delay:1.5
             })
             .to(rocket,2,{
-                y:-100,
+                y:-160,
                 delay:2
             })
             .to(rocket,1.5,{
                 rotation: 80,
-                y:-130,
-                x:110,
+                y:-230,
+                x:230,
                 delay:0
             })
             .to(rocket,2,{
@@ -537,16 +550,16 @@ function LaunchRocket()
             })
             .to(rocket,2,{
                 rotation: -60,
-                y:-260,
+                y:-460,
                 x:-40,
             })
             .to(rocket,2,{
                 rotation: 0,
             })
             .to(rocket,0.4,{
-                rotation: 60,
-                y:-340,
-                x:250,
+                rotation: 50,
+                y:-740,
+                x:550,
             })
             setTimeout(() => {
                 document.querySelector('.dream-text').style.display = 'none';
@@ -562,6 +575,7 @@ function LaunchRocket()
     }
         
 }
+// LaunchRocket()
 //Form
 function formvalidate()
 {
