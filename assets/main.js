@@ -10,13 +10,12 @@ var audioAnserwrong = document.querySelector('.audio-anserwrong');
 var intro = document.querySelector('.intro');
 var btn = document.querySelector('.btn');
 var birthday = document.querySelector('.birthday');
-var borderArray = ['50%','0'];//Lấy giọt mưa borderraidus hình 
 var borderStar = ['50%','50%'];
-var blursArray = ['1px','4px'];// Lấy dộ mờ
+var blursArray = ['0px','2px'];// Lấy dộ mờ
 var colorsArray = ['#FBFACD','orange','#00E7FF'];
 var width = document.documentElement.clientWidth;
 var height = document.documentElement.clientHeight;
-var count1 = 70;
+var count1 = 200;
 function star()
 {
     for (var i=0;i<count1;i++)
@@ -28,7 +27,7 @@ function star()
         var border = Math.floor(Math.random()*2);
         var widthElement = Math.floor(Math.random()*4)+4;
         var blur = Math.floor(Math.random()*2);
-        var timeanimation = Math.floor(Math.random()*8)+4;
+        var timeanimation = Math.floor(Math.random()*3)+2;
         div.style.backgroundColor = colorsArray[color];
         div.style.borderRadius = borderStar[border];
         div.style.position = 'absolute';
@@ -37,10 +36,10 @@ function star()
         div.style.marginLeft = randomLeft + 'px';
         div.style.marginTop = randomTop + 'px';
         div.style.filter = 'blur(' + blursArray[blur] + ')';
-        div.style.animation = 'star '+ timeanimation + 's ease-in infinite';
+        div.style.animation = 'star ' + timeanimation + 's ease-in infinite';
         intro.appendChild(div);
     }
-}
+}   
 function formvalidate()
 {
     var number = 22022003;
