@@ -334,245 +334,297 @@ function birthdayCard()
     },30000);
     BirthdayBtn.onclick = function()
     {
+        clearTimeout(setTimeout(()=> {
+            timeLine
+                .to(BirthdayBtn,0.5,{
+                    opacity:0.1,
+                    x:70
+                })
+                .to(BirthdayBtn,0.5,{
+                    opacity:1,
+                    x:0
+                })
+        },30000));
+        clearTimeout(setTimeout(animate,21000));
+        clearTimeout(setTimeout(()=>{
+            document.querySelector('.birthday-heart').style.display = 'block';
+        },8000));
+        setTimeout(()=> {
+            birthdaytext1.style.display = 'block'
+            birthdaytext2.style.display = 'block'
+            birthdaytext3.style.display = 'block'
+            birthdaytext4.style.display = 'block'
+            birthdaytext5.style.display = 'block'
+            birthdaytext6.style.display = 'block'
+            birthdaytext7.style.display = 'block'
+            birthdaytext8.style.display = 'block'
+            birthdaytext9.style.display = 'block'
+            birthdaytext10.style.display = 'block'
+            birthdaytext11.style.display = 'block'
+            birthdaytext12.style.display = 'block'
+            birthdaytext13.style.display = 'block'
+            showText();
+        },8000);
+        clearTimeout(setTimeout(()=>{
+            birthdaytext1.style.animation = 'Rotate 1.5s ease-in infinite'
+            birthdaytext2.style.animation = 'Rotate 2s ease-in infinite'
+            birthdaytext3.style.animation = 'Rotate 1.5s ease-in infinite'
+            birthdaytext4.style.animation = 'Rotate 1.9s ease-in infinite'
+            birthdaytext5.style.animation = 'Rotate 1.3s ease-in infinite'
+            birthdaytext6.style.animation = 'Rotate 1.8s ease-in infinite'
+            birthdaytext7.style.animation = 'Rotate 1.5s ease-in infinite'
+            birthdaytext8.style.animation = 'Rotate 1.1s ease-in infinite'
+            birthdaytext9.style.animation = 'Rotate 1.7s ease-in infinite'
+            birthdaytext10.style.animation = 'Rotate 2s ease-in infinite'
+            birthdaytext11.style.animation = 'Rotate 1.5s ease-in infinite'
+            birthdaytext12.style.animation = 'Rotate 1.7s ease-in infinite'
+            birthdaytext13.style.animation = 'Rotate 1.9s ease-in infinite'
+        },1000));
         cake();
     }
 }
 //Cake
-// function cake()
-// {   
-//     form.style.display = 'none';
-//     birthday.style.display = 'none';
-//     cakeContain.style.display = 'block';
-//     createRain();
-//     var WishBtn = document.querySelector('.text--btn');
-//     var Texthpbd = document.querySelector('.text h1');
-//     var balloon1 = document.querySelector('.balloon1');
-//     var balloon2 = document.querySelector('.balloon2');
-//     var balloon3 = document.querySelector('.balloon3');
-//     var balloon4 = document.querySelector('.balloon4');
-//     var balloon5 = document.querySelector('.balloon5');
-//     var balloon6 = document.querySelector('.balloon6');
-//     var balloon7 = document.querySelector('.balloon7');
-//     var balloon8 = document.querySelector('.balloon8');
-//     var balloon9 = document.querySelector('.balloon9');
-//     var balloon10 = document.querySelector('.balloon10');
-//     var timeLine = new TimelineMax({
-//         paused: false
-//     });
-//     timeLine
-//         .to(Texthpbd, 0.2,{
-//             y:-20,
-//         })
-//         .to(balloon1,0.5,{
-//             y:-400
-//         })
-//         .to(Texthpbd, 0.2,{
-//             y:-10,
-//             opacity:0.5
-//         })
-//         .to(Texthpbd, 0.5,{
-//             y:0,
-//             opacity:1
-//         })
-//         .to(WishBtn, 0.5,{
-//             y:-20,
-//         })
-//         .to(balloon1,0.5,{
-//             y:0,
-//             opacity:1
-//         })
-//         .to(balloon2,1,{
-//             y:0,
-//             opacity:1
-//         })
-//         .to(balloon3,0.5,{
-//             y:0,
-//             opacity:1
-//         })
-//         .to(balloon4,0.3,{
-//             y:0,
-//             opacity:1
-//         })
-//         .to(balloon5,0.5,{
-//             y:0,
-//             opacity:1
-//         })
-//         .to(balloon6,0.5,{
-//             y:0,
-//             opacity:1
-//         })
-//         .to(balloon7,0.5,{
-//             y:0,
-//             opacity:1
-//         })
-//         .to(balloon8,0.5,{
-//             y:0,
-//             opacity:1
-//         })
-//         .to(balloon9,0.5,{
-//             y:0,
-//             opacity:1
-//         })
-//         .to(balloon10,0.5,{
-//             y:0,
-//             opacity:1
-//         })
-//         setTimeout(() => {
-//             timeLine
-//                 .to(WishBtn, 0.5,{
-//                     y:0,
-//                     opacity:1
-//                 })
-//         }, 10000);
-//         WishBtn.onclick = function()
-//         {
-//             document.querySelector('.text-para').style.display = 'none'
-//             var timeLine = new TimelineMax({
-//                 paused: false
-//             });
-//             timeLine
-//             .to(WishBtn, 0.8, {
-//                 height: 0.2,
-//                 opacity: 0.5,
-//                 boxShadow: "0px 0px 35px 7px #cd28fa",
-//                 delay: 0.25
-//             })
-//             .to(WishBtn, 0.1, {
-//                 opacity: 0.5,
-//                 background: "#26ff92"
-//             })
-//             .to(WishBtn, 0, {
-//                 width: 1,
-//                 delay: 0.2
-//             })
-//             .to(WishBtn, 0.1, {
-//                 boxShadow: "0px 0px 100px 55px #bc97ceaa",
-//                 y: 90,
-//                 height: 100,
-//                 delay: 0.23
-//             })
-//             .to(WishBtn, 0.3, {
-//                 height: 1000,
-//                 y: -1500,
-//                 boxShadow: "0px 0px 85px 17px #e778d6",
-//                 delay: 0.2
-//             })
-//             setTimeout(() => {
-//                 cakeContain.style.display = 'none';
-//                 cakeContain.style.transition = 'all 2s ease-in'
-//                 dream.style.display = 'block';
-//                 dream.style.animation = 'opacity 2s ease-in'
-//                 LaunchRocket();
-//                 for (var i=0;i<150;i++)
-//                 {
-//                     var div = document.createElement("div");
-//                     var randomLeft =Math.floor(Math.random()* width);
-//                     var randomTop =Math.floor(Math.random()* height);
-//                     var border = Math.floor(Math.random()*2);
-//                     var widthElement = Math.floor(Math.random()*2)+3;
-//                     var timeanimation = Math.floor(Math.random()*3)+2;
-//                     div.style.backgroundColor = 'rgba(255,255,200,0.8)';
-//                     div.style.borderRadius = borderStar[border];
-//                     div.style.content = '⭐';
-//                     div.style.position = 'absolute';
-//                     div.style.width = widthElement + 'px';
-//                     div.style.height = widthElement + 'px';
-//                     div.style.marginLeft = randomLeft + 'px';
-//                     div.style.marginTop = randomTop + 'px';
-//                     div.style.animation = 'star ' + timeanimation+ 's ease-in infinite';
-//                     dreamStar.appendChild(div);
-//                 }
-//             }, 3000);
-//         }
-// }
+function cake()
+{   
+    form.style.display = 'none';
+    birthday.style.display = 'none';
+    cakeContain.style.display = 'block';
+    createRain();
+    var WishBtn = document.querySelector('.text--btn');
+    var Texthpbd = document.querySelector('.text h1');
+    var balloon1 = document.querySelector('.balloon1');
+    var balloon2 = document.querySelector('.balloon2');
+    var balloon3 = document.querySelector('.balloon3');
+    var balloon4 = document.querySelector('.balloon4');
+    var balloon5 = document.querySelector('.balloon5');
+    var balloon6 = document.querySelector('.balloon6');
+    var balloon7 = document.querySelector('.balloon7');
+    var balloon8 = document.querySelector('.balloon8');
+    var balloon9 = document.querySelector('.balloon9');
+    var balloon10 = document.querySelector('.balloon10');
+    var timeLine = new TimelineMax({
+        paused: false
+    });
+    timeLine
+        .to(Texthpbd, 0.2,{
+            y:-20,
+        })
+        .to(balloon1,0.5,{
+            y:-400
+        })
+        .to(Texthpbd, 0.2,{
+            y:-10,
+            opacity:0.5
+        })
+        .to(Texthpbd, 0.5,{
+            y:0,
+            opacity:1
+        })
+        .to(WishBtn, 0.5,{
+            y:-20,
+        })
+        .to(balloon1,0.5,{
+            y:0,
+            opacity:1
+        })
+        .to(balloon2,1,{
+            y:0,
+            opacity:1
+        })
+        .to(balloon3,0.5,{
+            y:0,
+            opacity:1
+        })
+        .to(balloon4,0.3,{
+            y:0,
+            opacity:1
+        })
+        .to(balloon5,0.5,{
+            y:0,
+            opacity:1
+        })
+        .to(balloon6,0.5,{
+            y:0,
+            opacity:1
+        })
+        .to(balloon7,0.5,{
+            y:0,
+            opacity:1
+        })
+        .to(balloon8,0.5,{
+            y:0,
+            opacity:1
+        })
+        .to(balloon9,0.5,{
+            y:0,
+            opacity:1
+        })
+        .to(balloon10,0.5,{
+            y:0,
+            opacity:1
+        })
+        setTimeout(() => {
+            timeLine
+                .to(WishBtn, 0.5,{
+                    y:0,
+                    opacity:1
+                })
+        }, 10000);
+        WishBtn.onclick = function()
+        {
+            clearTimeout(setTimeout(() => {
+                timeLine
+                    .to(WishBtn, 0.5,{
+                        y:0,
+                        opacity:1
+                    })
+            }, 10000));
+            document.querySelector('.text-para').style.display = 'none'
+            var timeLine = new TimelineMax({
+                paused: false
+            });
+            timeLine
+            .to(WishBtn, 0.8, {
+                height: 0.2,
+                opacity: 0.5,
+                boxShadow: "0px 0px 35px 7px #cd28fa",
+                delay: 0.25
+            })
+            .to(WishBtn, 0.1, {
+                opacity: 0.5,
+                background: "#26ff92"
+            })
+            .to(WishBtn, 0, {
+                width: 1,
+                delay: 0.2
+            })
+            .to(WishBtn, 0.1, {
+                boxShadow: "0px 0px 100px 55px #bc97ceaa",
+                y: 90,
+                height: 100,
+                delay: 0.23
+            })
+            .to(WishBtn, 0.3, {
+                height: 1000,
+                y: -1500,
+                boxShadow: "0px 0px 85px 17px #e778d6",
+                delay: 0.2
+            })
+            setTimeout(() => {
+                cakeContain.style.display = 'none';
+                cakeContain.style.transition = 'all 2s ease-in'
+                dream.style.display = 'block';
+                dream.style.animation = 'opacity 2s ease-in'
+                LaunchRocket();
+                for (var i=0;i<150;i++)
+                {
+                    var div = document.createElement("div");
+                    var randomLeft =Math.floor(Math.random()* width);
+                    var randomTop =Math.floor(Math.random()* height);
+                    var border = Math.floor(Math.random()*2);
+                    var widthElement = Math.floor(Math.random()*2)+3;
+                    var timeanimation = Math.floor(Math.random()*3)+2;
+                    div.style.backgroundColor = 'rgba(255,255,200,0.8)';
+                    div.style.borderRadius = borderStar[border];
+                    div.style.content = '⭐';
+                    div.style.position = 'absolute';
+                    div.style.width = widthElement + 'px';
+                    div.style.height = widthElement + 'px';
+                    div.style.marginLeft = randomLeft + 'px';
+                    div.style.marginTop = randomTop + 'px';
+                    div.style.animation = 'star ' + timeanimation+ 's ease-in infinite';
+                    dreamStar.appendChild(div);
+                }
+            }, 3000);
+        }
+}
 //LaunchRocket
-// function LaunchRocket()
-// {
-//     var dreamArrow = document.querySelector('.dream-arrow');
-//     var Arrow = document.querySelector('.arrow');
-//     var dreamMsg = document.querySelector('.dream-contain--msg');
-//     var dreamText = document.querySelector('.dream-text');
-//     var moonBtn = document.querySelector('.moon-btn');
-//     var rocket = document.querySelector('.rocket');
-//     var starBklink = document.querySelector('.star-blink');
-//     var string = 'Gửi điều ước vào đây và phóng chúng vào vì sao nào';
-//     var str = string.split('');
-//     function animate()
-//     {
-//         str.length > 0 ? dreamText.innerHTML += str.shift() : clearTimeout(running);
-//         var running = setTimeout(animate,40);
-//     }
-//     setTimeout(animate,1000);     
-//     var timeLine = new TimelineMax({
-//         paused: false
-//     });
-//     moonBtn.onclick = function()
-//     {
-//         setTimeout(() => {
-//             dreamMsg.style.right = '168px'
-//             dreamMsg.style.bottom = '260px'
-//             dreamMsg.style.transition = 'all 1s ease-in'
-//         }, 4000);
-//         timeLine
-//             .to(dreamArrow,0.5,{
-//                 opacity:0
-//             })
-//             .to(Arrow,0.5,{
-//                 opacity:0
-//             })
-//             .to(dreamMsg,1,{
-//                 rotation: 150,
-//                 delay:1
-//             })
-//             .to(dreamMsg,1,{
-//                 x:-140,
-//                 y:48,
-//                 width:0,
-//             })
-//             .to(dreamMsg,0.5,{
-//                 opacity:0,
-//                 delay:1.5
-//             })
-//             .to(rocket,2,{
-//                 y:-160,
-//                 delay:2
-//             })
-//             .to(rocket,1.5,{
-//                 rotation: 80,
-//                 y:-230,
-//                 x:230,
-//                 delay:0
-//             })
-//             .to(rocket,2,{
-//                 rotation: 0,
-//             })
-//             .to(rocket,2,{
-//                 rotation: -60,
-//                 y:-460,
-//                 x:-40,
-//             })
-//             .to(rocket,2,{
-//                 rotation: 0,
-//             })
-//             .to(rocket,0.4,{
-//                 rotation: 50,
-//                 y:-740,
-//                 x:550,
-//             })
-//             setTimeout(() => {
-//                 document.querySelector('.dream-text').style.display = 'none';
-//                 document.querySelector('.dream-text').style.transition = 'all 1s ease-in';
-//             },3000);
-//             setTimeout(() => {
-//                 starBklink.style.display = 'block';
-//             }, 17500);
-//             setTimeout(() => {
-//                 starBklink.style.display = 'none';
-//                 starBklink.style.transition = 'all 2s'
-//             }, 21500);
-//     }
-        
-// }
+function LaunchRocket()
+{
+    var dreamArrow = document.querySelector('.dream-arrow');
+    var Arrow = document.querySelector('.arrow');
+    var dreamMsg = document.querySelector('.dream-contain--msg');
+    var dreamText = document.querySelector('.dream-text');
+    var moonBtn = document.querySelector('.moon-btn');
+    var rocket = document.querySelector('.rocket');
+    var starBklink = document.querySelector('.star-blink');
+    var string = 'Gửi điều ước vào đây và phóng chúng vào vì sao nào';
+    var str = string.split('');
+    function animate()
+    {
+        str.length > 0 ? dreamText.innerHTML += str.shift() : clearTimeout(running);
+        var running = setTimeout(animate,40);
+    }
+    setTimeout(animate,1000);     
+    var timeLine = new TimelineMax({
+        paused: false
+    });
+    moonBtn.onclick = function()
+    {
+        setTimeout(() => {
+            dreamMsg.style.right = '168px'
+            dreamMsg.style.bottom = '260px'
+            dreamMsg.style.transition = 'all 1s ease-in'
+        }, 4000);
+        timeLine
+            .to(dreamArrow,0.5,{
+                opacity:0
+            })
+            .to(Arrow,0.5,{
+                opacity:0
+            })
+            .to(dreamMsg,1,{
+                rotation: 150,
+                delay:1
+            })
+            .to(dreamMsg,1,{
+                x:-140,
+                y:48,
+                width:0,
+            })
+            .to(dreamMsg,0.5,{
+                opacity:0,
+                delay:1.5
+            })
+            .to(rocket,2,{
+                y:-100,
+                delay:2
+            })
+            .to(rocket,1.5,{
+                rotation: 80,
+                y:-180,
+                x:230,
+                delay:0
+            })
+            .to(rocket,2,{
+                rotation: 0,
+            })
+            .to(rocket,2,{
+                rotation: -60,
+                y:-260,
+                x:-40,
+            })
+            .to(rocket,2,{
+                rotation: 0,
+            })
+            .to(rocket,0.5,{
+                rotation: 50,
+                y:-670,
+                x:550,
+            })
+            setTimeout(() => {
+                document.querySelector('.dream-text').style.display = 'none';
+                document.querySelector('.dream-text').style.transition = 'all 1s ease-in';
+            },3000);
+            setTimeout(() => {
+                starBklink.style.display = 'block';
+            }, 17500);
+            setTimeout(() => {
+                starBklink.style.display = 'none';
+                starBklink.style.transition = 'all 2s'
+            }, 21500);
+    }
+}
 //Form
 function formvalidate()
 {
@@ -656,7 +708,7 @@ function formvalidate()
         })        
         formbtn.onclick = function()
         {
-            // audio.pause();
+            audio.pause();
             if (formInput.value != number) {
                 console.log('sai r');
                 ImgWrong.style.display = 'block';
@@ -691,16 +743,24 @@ function formvalidate()
                                 opacity:1,
                             })        
                         ImgWrong.style.display = 'none';
-                        // audio.play();
+                        audio.play();
                     },7000)
             }
             else {  
-                // audio.pause();
+                audio.pause();
                 setTimeout(()=> {
-                    // audioBirthday.play();
+                    audioBirthday.play();
                 },5000)
                 birthday.style.display = 'block';
                 birthday.style.animation = 'opacity 2s ease-in';
+                clearTimeout(setTimeout(() => {
+                    audio.play();
+                    createRain();
+                    content.style.display = 'block';
+                }, 2500));
+                clearTimeout(setTimeout(() => {
+                    formvalidate();
+                },38000));
                 birthdayCard();
             }   
         }        
@@ -746,13 +806,13 @@ function sendBtn()
                 delay: 0.2
             })
             setTimeout(() => {
-                // audio.play();
+                audio.play();
                 createRain();
                 content.style.display = 'block';
             }, 2500);
             setTimeout(() => {
                 formvalidate();
-            },20000)
+            },38000)
         });    
 }
 sendBtn();
