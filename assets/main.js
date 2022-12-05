@@ -156,41 +156,38 @@ function sendBtn()
         paused: false
     });    
     btn.addEventListener("click", () => {
-        timeLine
-            .to(btnText, 0.6, {
-                opacity: 0
-            })
-            .to(btn, 0.8, {
-                height: 0.2,
-                opacity: 0.5,
-                boxShadow: "0px 0px 35px 7px #cd28fa",
-                delay: 0.25
-            })
-            .to(btn, 0.1, {
-                opacity: 0.5,
-                background: "#26ff92"
-            })
-            .to(btn, 0, {
-                width: 1,
-                delay: 0.2
-            })
-            .to(btn, 0.1, {
-                boxShadow: "0px 0px 100px 55px #B01E68",
-                y: 90,
-                height: 100,
-                delay: 0.23
-            })
-            .to(btn, 0.3, {
-                height: 1000,
-                y: -1500,
-                boxShadow: "0px 0px 85px 17px #B01E68",
-                delay: 0.2
-            })
-            setTimeout(() => {
-                // audio.play();
-                createRain();
+        // timeLine
+        //     .to(btnText, 0.6, {
+        //         opacity: 0
+        //     })
+        //     .to(btn, 0.8, {
+        //         height: 0.2,
+        //         opacity: 0.5,
+        //         boxShadow: "0px 0px 35px 7px #cd28fa",
+        //         delay: 0.25
+        //     })
+        //     .to(btn, 0.1, {
+        //         opacity: 0.5,
+        //         background: "#26ff92"
+        //     })
+        //     .to(btn, 0, {
+        //         width: 1,
+        //         delay: 0.2
+        //     })
+        //     .to(btn, 0.1, {
+        //         boxShadow: "0px 0px 100px 55px #B01E68",
+        //         y: 90,
+        //         height: 100,
+        //         delay: 0.23
+        //     })
+        //     .to(btn, 0.3, {
+        //         height: 1000,
+        //         y: -1500,
+        //         boxShadow: "0px 0px 85px 17px #B01E68",
+        //         delay: 0.2
+        //     })
                 content.style.display = 'block';
-            }, 2500);
+                btn.style.display = 'none'
             setTimeout(() => {
                 formvalidate();
             },38000)
