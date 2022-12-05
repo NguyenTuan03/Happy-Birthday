@@ -1,7 +1,5 @@
-/* XS max */
-@media only screen 
-and (device-width: 414px) 
-and (device-height: 896px) { 
+/* ip11 */
+@media (max-width: 415px){ 
     /* Styles */
     * {
         padding: 0;
@@ -10,6 +8,7 @@ and (device-height: 896px) {
         font-family: 'Times New Roman', Times, serif;
     }
     body {
+        height: 896px;
         background-color: #7F669D;
         overflow: hidden;
     }
