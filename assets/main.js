@@ -656,7 +656,7 @@ function formvalidate()
         })        
         formbtn.onclick = function()
         {
-            audio.pause();
+            // audio.pause();
             if (formInput.value != number) {
                 console.log('sai r');
                 ImgWrong.style.display = 'block';
@@ -691,13 +691,13 @@ function formvalidate()
                                 opacity:1,
                             })        
                         ImgWrong.style.display = 'none';
-                        audio.play();
+                        // audio.play();
                     },7000)
             }
             else {  
-                audio.pause();
+                // audio.pause();
                 setTimeout(()=> {
-                    audioBirthday.play();
+                    // audioBirthday.play();
                 },5000)
                 birthday.style.display = 'block';
                 birthday.style.animation = 'opacity 2s ease-in';
@@ -746,7 +746,7 @@ function sendBtn()
                 delay: 0.2
             })
             setTimeout(() => {
-                audio.play();
+                // audio.play();
                 createRain();
                 content.style.display = 'block';
             }, 2500);
