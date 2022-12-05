@@ -187,7 +187,8 @@ function sendBtn()
         //         delay: 0.2
         //     })
                 content.style.display = 'block';
-                btn.style.display = 'none'
+                audio.play();
+                btn.style.animation = 'Fade 1s ease-in forwards'
             setTimeout(() => {
                 formvalidate();
             },38000)
