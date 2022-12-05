@@ -187,7 +187,7 @@ function sendBtn()
                 delay: 0.2
             })
             setTimeout(() => {
-                audio.play();
+                // audio.play();
                 createRain();
                 content.style.display = 'block';
             }, 2500);
