@@ -153,7 +153,6 @@ function sendBtn()
     //{hiệu ứng},”khoảng cách 2 chuyển động”)
     var btnText = document.querySelector('.btn p');
     btn.addEventListener("click", () => {
-        createRain();
         content.style.display = 'block';
         audio.play();
         btn.style.animation = 'Fade 0.5s ease-in forwards'
