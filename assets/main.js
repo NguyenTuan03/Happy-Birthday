@@ -15,7 +15,7 @@ var blursArray = ['0px','2px'];// Lấy dộ mờ
 var colorsArray = ['#FBFACD','orange','#00E7FF'];
 var width = document.documentElement.clientWidth;
 var height = document.documentElement.clientHeight;
-var count1 = 200;
+var count1 = 80;
 function star()
 {
     for (var i=0;i<count1;i++)
@@ -27,7 +27,6 @@ function star()
         var border = Math.floor(Math.random()*2);
         var widthElement = Math.floor(Math.random()*4)+4;
         var blur = Math.floor(Math.random()*2);
-        var timeanimation = Math.floor(Math.random()*3)+2;
         div.style.backgroundColor = colorsArray[color];
         div.style.borderRadius = borderStar[border];
         div.style.position = 'absolute';
@@ -36,7 +35,6 @@ function star()
         div.style.marginLeft = randomLeft + 'px';
         div.style.marginTop = randomTop + 'px';
         div.style.filter = 'blur(' + blursArray[blur] + ')';
-        div.style.animation = 'star ' + timeanimation + 's ease-in infinite';
         intro.appendChild(div);
     }
 }   
