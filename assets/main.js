@@ -163,7 +163,7 @@ function formvalidate()
                 setTimeout(() => {
                     audioBirthday.play();
                     birthday.style.display = 'block';
-                    birthday.style.animation = 'opacity 2s ease-in';
+                    birthday.style.animation = 'opacity 1s ease-in';
                     clearTimeout(setTimeout(() => {
                         audio.play();
                         content.style.display = 'block';
