@@ -160,6 +160,7 @@ function formvalidate()
             }
             else {  
                 audio.pause();
+                audioBirthday.play()
                 birthday.style.display = 'block';
                 birthday.style.animation = 'opacity 1s ease-in';
                 clearTimeout(setTimeout(() => {
@@ -221,11 +222,6 @@ function birthdayCard()
             birthdaytext13.style.animation = 'Rotate 1.9s ease-in infinite'
         },1000)
     }
-    function music()
-    {
-        audioBirthday.play();
-    }
-    setTimeout(music,4000);
     var timeLine = new TimelineMax({
         paused: false
     });
