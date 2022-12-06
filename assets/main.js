@@ -160,19 +160,16 @@ function formvalidate()
             }
             else {  
                 audio.pause();
-                setTimeout(() => {
-                    audioBirthday.play();
-                    birthday.style.display = 'block';
-                    birthday.style.animation = 'opacity 1s ease-in';
-                    clearTimeout(setTimeout(() => {
-                        audio.play();
-                        content.style.display = 'block';
-                    }, 2500));
-                    clearTimeout(setTimeout(() => {
-                        formvalidate();
-                    },38000));
-                    birthdayCard();
-                }, 2500);
+                birthday.style.display = 'block';
+                birthday.style.animation = 'opacity 1s ease-in';
+                clearTimeout(setTimeout(() => {
+                    audio.play();
+                    content.style.display = 'block';
+                }, 2500));
+                clearTimeout(setTimeout(() => {
+                    formvalidate();
+                },38000));
+                birthdayCard();
             }   
         }            
 }
@@ -224,6 +221,11 @@ function birthdayCard()
             birthdaytext13.style.animation = 'Rotate 1.9s ease-in infinite'
         },1000)
     }
+    function music()
+    {
+        audioBirthday.play();
+    }
+    setTimeout(music,4000);
     var timeLine = new TimelineMax({
         paused: false
     });
@@ -284,11 +286,6 @@ function birthdayCard()
             y:-10,
             height:0,
         })
-        // .to(lineDecorLeft,0.5,{
-        //     opacity:1,
-        //     y:0,
-        //     height:32,
-        // })
         .to(triangleLeft1,0.2,{
             opacity:1,
             y:0,
