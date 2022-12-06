@@ -86,7 +86,7 @@ and (-webkit-device-pixel-ratio: 2){
         font-size: 40px;
     }
     .content .frame-6 {
-        font-size: 28px;
+        font-size: 32px;
         animation-delay: 14s;
     }
     .content .frame-7 {
@@ -280,16 +280,11 @@ and (-webkit-device-pixel-ratio: 2){
         height: 20px;
         top: 25px;
         left: 36px;
-        transform: rotate(87deg);
-        width: 0;
-        height: 0;
-        width: 0;
-        height: 0;
-        width: 0;
-        height: 0;
+        transform: rotate(87deg);        
         border-top: 15px solid transparent;
         border-bottom: 15px solid transparent;
         border-left: 22px solid #3ca27a;
+        opacity: 0;
     }
 
     .triangle--left2 {
@@ -299,15 +294,10 @@ and (-webkit-device-pixel-ratio: 2){
         top: 23px;
         left: 79px;
         transform: rotate(85deg);
-        width: 0;
-        height: 0;
-        width: 0;
-        height: 0;
-        width: 0;
-        height: 0;
         border-top: 15px solid transparent;
         border-bottom: 15px solid transparent;
         border-left: 22px solid #456db8;    
+        opacity: 0;
     }
 
     .triangle--left3 {
@@ -320,6 +310,7 @@ and (-webkit-device-pixel-ratio: 2){
         border-top: 15px solid transparent;
         border-bottom: 15px solid transparent;
         border-left: 22px solid #e7b1e2;    
+        opacity: 0;
     }
     .triangle--left4 {
         position: absolute;
@@ -328,15 +319,10 @@ and (-webkit-device-pixel-ratio: 2){
         top: 19px;
         left: 168px;
         transform: rotate(84deg);
-        width: 0;
-        height: 0;
-        width: 0;
-        height: 0;
-        width: 0;
-        height: 0;
         border-top: 15px solid transparent;
         border-bottom: 15px solid transparent;
         border-left: 22px solid #a3daec;
+        opacity: 0;
     }
     .triangle--right1 {
         position: absolute;
@@ -348,6 +334,7 @@ and (-webkit-device-pixel-ratio: 2){
         border-top: 15px solid transparent;
         border-bottom: 15px solid transparent;
         border-right: 22px solid #f14947;
+        opacity: 0;
     }
 
     .triangle--right2 {
@@ -360,6 +347,7 @@ and (-webkit-device-pixel-ratio: 2){
         border-top: 15px solid transparent;
         border-bottom: 15px solid transparent;
         border-right: 22px solid #456db8;
+        opacity: 0;
     }
 
     .triangle--right3 {
@@ -372,6 +360,7 @@ and (-webkit-device-pixel-ratio: 2){
         border-top: 15px solid transparent;
         border-bottom: 15px solid transparent;
         border-right: 22px solid #afdccb;
+        opacity: 0;
     }
 
     .triangle--right4 {
@@ -384,6 +373,7 @@ and (-webkit-device-pixel-ratio: 2){
         border-top: 15px solid transparent;
         border-bottom: 15px solid transparent;
         border-right: 22px solid #f89f46;
+        opacity: 0;
     }
     .birthday-text1 {
         position: absolute;

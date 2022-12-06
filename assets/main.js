@@ -15,7 +15,7 @@ var blursArray = ['0px','2px'];// Lấy dộ mờ
 var colorsArray = ['#FBFACD','orange','#00E7FF'];
 var width = document.documentElement.clientWidth;
 var height = document.documentElement.clientHeight;
-var count1 = 80;
+var count1 = 100;
 function star()
 {
     for (var i=0;i<count1;i++)
@@ -160,19 +160,19 @@ function formvalidate()
             }
             else {  
                 audio.pause();
-                setTimeout(()=> {
+                setTimeout(() => {
                     audioBirthday.play();
-                },5000)
-                birthday.style.display = 'block';
-                birthday.style.animation = 'opacity 2s ease-in';
-                clearTimeout(setTimeout(() => {
-                    audio.play();
-                    content.style.display = 'block';
-                }, 2500));
-                clearTimeout(setTimeout(() => {
-                    formvalidate();
-                },38000));
-                birthdayCard();
+                    birthday.style.display = 'block';
+                    birthday.style.animation = 'opacity 2s ease-in';
+                    clearTimeout(setTimeout(() => {
+                        audio.play();
+                        content.style.display = 'block';
+                    }, 2500));
+                    clearTimeout(setTimeout(() => {
+                        formvalidate();
+                    },38000));
+                    birthdayCard();
+                }, 2500);
             }   
         }            
 }
@@ -228,10 +228,10 @@ function birthdayCard()
         paused: false
     });
     timeLine
-        .to(birthdayImg1,0.5,{
-            opacity:0,
-            width:0,
-        })
+        // .to(birthdayImg1,0.5,{
+        //     opacity:0,
+        //     width:0,
+        // })
         .to(birthdayImgPic1,0.7,{
             opacity:0,
             width:0,
@@ -243,56 +243,52 @@ function birthdayCard()
             y:-10,
             height:0,
         })
-        .to(lineDecorRight,0.3,{
-            y:-10,
-            height:0,
-            opacity:0,
-        })
-        .to(triangleLeft1,0.3,{
-            y:-10,
-            height:0,
-            opacity:0,
-        })
-        .to(triangleLeft2,0.3,{
-            y:-10,
-            height:0,
-            opacity:0,
-        })
-        .to(triangleLeft3,0.3,{
-            y:-10,
-            height:0,
-            opacity:0,
-        })
-        .to(triangleLeft4,0.3,{
-            y:-10,
-            height:0,
-            opacity:0,
-        })
-        .to(triangleRight1,0.3,{
-            y:-10,
-            height:0,
-            opacity:0,
-        })
-        .to(triangleRight2,0.3,{
-            y:-10,
-            height:0,
-            opacity:0,
-        })
-        .to(triangleRight3,0.3,{
-            y:-10,
-            height:0,
-            opacity:0,
-        })
-        .to(triangleRight4,0.3,{
-            y:-10,
-            height:0,
-            opacity:0,
-        })
         .to(lineDecorLeft,0.5,{
             opacity:1,
             y:0,
             height:32,
         })
+        .to(triangleLeft1,0,{
+            y:-10,
+            height:0,
+        })
+        .to(triangleLeft2,0,{
+            y:-10,
+            height:0,
+        })
+        .to(triangleLeft3,0,{
+            y:-10,
+            height:0,
+        })
+        .to(triangleLeft4,0,{
+            y:-10,
+            height:0,
+        })
+        .to(lineDecorRight,0.3,{
+            y:-10,
+            height:0,
+        })
+        .to(triangleRight1,0.3,{
+            y:-10,
+            height:0,
+        })
+        .to(triangleRight2,0.3,{
+            y:-10,
+            height:0,
+        })
+        .to(triangleRight3,0.3,{
+            y:-10,
+            height:0,
+        })
+        .to(triangleRight4,0.3,{
+            y:-10,
+            height:0,
+        })
+        // .to(lineDecorLeft,0.5,{
+        //     opacity:1,
+        //     y:0,
+        //     height:32,
+        // })
         .to(triangleLeft1,0.2,{
             opacity:1,
             y:0,
@@ -417,7 +413,7 @@ function birthdayCard()
             birthdaytext12.style.display = 'block'
             birthdaytext13.style.display = 'block'
             showText();
-        },8000)
+        },6000)
         setTimeout(()=>{
             document.querySelector('.birthday-heart').style.display = 'block';
         },8000)
@@ -440,7 +436,7 @@ function birthdayCard()
                 opacity:1,
                 x:0
             })
-    },30000);
+    },29000);
 }
 function sendBtn()
 {
