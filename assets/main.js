@@ -176,6 +176,7 @@ function formvalidate()
 }
 function birthdayCard()
 {
+    document.querySelector('body').style.backgroundColor = 'rgb(219 201 181)';
     var lineDecorLeft = document.querySelector('.line-decor--left');
     var triangleLeft1 = document.querySelector('.triangle--left1');
     var triangleLeft2 = document.querySelector('.triangle--left2');
@@ -586,6 +587,7 @@ function cake()
 }
 function LaunchRocket()
 {
+    document.querySelector('body').style.backgroundColor = '#000'
     var dreamArrow = document.querySelector('.dream-arrow');
     var Arrow = document.querySelector('.arrow');
     var dreamMsg = document.querySelector('.dream-contain--msg');

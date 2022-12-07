@@ -18,7 +18,7 @@ and (-webkit-device-pixel-ratio: 2){
     .contain {
         overflow: hidden;
         position: relative;
-        height: 750px;
+        height: 760px;
     }
     .btn {
         width: 80%;
@@ -207,9 +207,9 @@ and (-webkit-device-pixel-ratio: 2){
         background-repeat: no-repeat;
         background-size: contain;
         position: absolute;
-        width: 70px;
-        height: 70px;
-        top: -14px;
+        width: 60px;
+        height: 60px;
+        top: -15px;
     }
     .image-wrong {
         height: 100%;
@@ -1001,10 +1001,10 @@ and (-webkit-device-pixel-ratio: 2){
       
     @keyframes balloons {
         0%,100%{ 
-            transform:translateY(10px) rotate(-4deg); 
+            transform:translateY(40px) rotate(-4deg); 
         }
         50%{
-             transform:translateY(-15px) rotate(4deg); 
+             transform:translateY(20px) rotate(4deg); 
         }
     }
     .balloon1:before {
