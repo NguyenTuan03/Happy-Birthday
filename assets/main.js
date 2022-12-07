@@ -453,6 +453,8 @@ function cake()
     var balloon8 = document.querySelector('.balloon8');
     var balloon9 = document.querySelector('.balloon9');
     var balloon10 = document.querySelector('.balloon10');
+    var balloon11 = document.querySelector('.balloon11');
+    var balloon12 = document.querySelector('.balloon12');
     var timeLine = new TimelineMax({
         paused: false
     });
@@ -514,6 +516,14 @@ function cake()
             y:0,
             opacity:1
         })
+        .to(balloon11,0.5,{
+            y:0,
+            opacity:1
+        })
+        .to(balloon12,0.5,{
+            y:0,
+            opacity:1
+        })
         sleep(10000)
             .then(
                 timeLine
@@ -556,14 +566,13 @@ function cake()
                     delay: 0.2
                 })
             sleep(3000)
-                .then()
-                {
+                .then(function(){
                     cakeContain.style.display = 'none';
                     cakeContain.style.transition = 'all 2s ease-in'
                     dream.style.display = 'block';
                     dream.style.animation = 'opacity 2s ease-in'
                     LaunchRocket();
-                    for (var i=0;i<150;i++)
+                    for (var i=0;i<200;i++)
                     {
                         var div = document.createElement("div");
                         var randomLeft =Math.floor(Math.random()* width);
@@ -573,7 +582,6 @@ function cake()
                         var timeanimation = Math.floor(Math.random()*3)+2;
                         div.style.backgroundColor = 'rgba(255,255,200,0.8)';
                         div.style.borderRadius = borderStar[border];
-                        div.style.content = '⭐';
                         div.style.position = 'absolute';
                         div.style.width = widthElement + 'px';
                         div.style.height = widthElement + 'px';
@@ -582,7 +590,8 @@ function cake()
                         div.style.animation = 'star ' + timeanimation+ 's ease-in infinite';
                         dreamStar.appendChild(div);
                     }
-                }
+
+                })
         }
 }
 function LaunchRocket()

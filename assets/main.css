@@ -657,7 +657,7 @@ and (-webkit-device-pixel-ratio: 2){
         position: absolute;
         width: 133px;
         height: 147px;
-        bottom: 5px;
+        bottom: 50px;
         right: 143px;
         opacity: 0;
     }
@@ -713,7 +713,7 @@ and (-webkit-device-pixel-ratio: 2){
         width: 153px;
         height: 83px;
         text-align: center;
-        bottom: 26px;
+        bottom: 66px;
         right: 21px;
         position: absolute;
         right: top;
@@ -806,7 +806,7 @@ and (-webkit-device-pixel-ratio: 2){
     }
     .text h1 {
         margin-bottom: 25px;
-        color: #d6d6af;
+        color: #6d6d35;
         text-shadow: 0px 0px 2px #fff;
         font-family: monospace;
         opacity: 0;
@@ -998,7 +998,40 @@ and (-webkit-device-pixel-ratio: 2){
         transform-origin: bottom center;
         opacity: 0;
     }
-      
+    .balloon11 {
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        background: rgba(166, 206, 213, 0.864);
+        border-radius: 80%;
+        position: absolute;
+        top: 8px;
+        right: 145px;
+        box-shadow: inset -10px -10px 0 rgb(0 0 0 / 7%);
+        margin: 20px 30px;
+        transition: transform 0.5s ease;
+        z-index: 10;
+        animation: balloons 5.1s ease-in-out infinite;
+        transform-origin: bottom center;
+        opacity: 0;
+    }
+    .balloon12 {
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        background: rgba(166, 206, 213, 0.864);
+        border-radius: 80%;
+        position: absolute;
+        top: 53px;
+        right: 127px;
+        box-shadow: inset -10px -10px 0 rgb(0 0 0 / 7%);
+        margin: 20px 30px;
+        transition: transform 0.5s ease;
+        z-index: 10;
+        animation: balloons 5.1s ease-in-out infinite;
+        transform-origin: bottom center;
+        opacity: 0;
+    } 
     @keyframes balloons {
         0%,100%{ 
             transform:translateY(40px) rotate(-4deg); 
