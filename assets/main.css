@@ -170,7 +170,7 @@ and (-webkit-device-pixel-ratio: 2){
         border-top-right-radius: 30px;
         outline: none;
         border: none;
-        width: 67%;
+        width: 70%;
         top: 32%;
         transform: translateX(-50%);
         left: 50%;
@@ -178,6 +178,7 @@ and (-webkit-device-pixel-ratio: 2){
     }
     .form-content:placeholder-shown {
         font-weight: 700;
+        font-size: 18px;
     }
     .form-btn {
         width: 40%;
@@ -191,6 +192,24 @@ and (-webkit-device-pixel-ratio: 2){
         top: 50%;
         transform: translateX(-50%);
         left: 50%;
+    }
+    .form-caution {
+        position: absolute;
+        font-size: 18px;
+        font-family: cursive;
+        bottom: 15px;
+        left: 28px;
+        color: #cc9e67;
+    }
+    .form-caution::after {
+        content: "";
+        background-image: url(../Music/gesture.gif);
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        top: -14px;
     }
     .image-wrong {
         height: 100%;
@@ -707,6 +726,321 @@ and (-webkit-device-pixel-ratio: 2){
         transform: rotate(-15deg);
         text-shadow: 1px 0px 1px #efe4cb;
         opacity: 0;
+    }
+    /* cake */
+    @import url(https://fonts.googleapis.com/css?family=Lato:300italic);
+    #cake {
+      display: block;
+      position: relative;
+      margin: -4em auto 0 auto;
+    }
+    .cake {
+        display: none;
+        animation: opacity 2s ease-in;
+    }
+
+/* ============================================== Candle
+*/
+.velas {
+        background: #ffffff;
+        border-radius: 10px;
+        position: absolute;
+        top: 317px;
+        left: 50%;
+        margin-left: -2.4px;
+        margin-top: -8.33333333px;
+        width: 5px;
+        height: 35px;
+        transform: translateY(-500px);
+        backface-visibility: hidden;
+        animation: in 500ms 6s ease-out forwards;
+    }
+    .velas:after,
+    .velas:before {
+        background: rgba(255, 0, 0, 0.4);
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2.22222222px;
+    }
+    .velas:after {
+        top: 25%;
+        left: 0;
+    }
+    .velas:before {
+        top: 45%;
+        left: 0;
+    }
+
+    /* ============================================== Fire
+    */
+    .fuego {
+        border-radius: 100%;
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        margin-left: -2.6px;
+        width: 6.66666667px;
+        height: 18px;
+    }
+    .fuego1 {
+        animation: fuego 2s 6.5s infinite;
+    }
+    .fuego2 {
+        animation: fuego 1.5s 6.5s infinite;
+    }
+    .fuego3 {
+        animation: fuego 1s 6.5s infinite;
+    }
+    .fuego4 {
+        animation: fuego 0.5s 6.5s infinite;
+    }
+    .fuego5 {
+        animation: fuego 0.2s 6.5s infinite;
+    }
+    .text {        
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        z-index: 3;
+    }
+    .text h1 {
+        margin-bottom: 25px;
+        color: #d6d6af;
+        text-shadow: 0px 0px 2px #fff;
+        font-family: monospace;
+        opacity: 0;
+    }
+    .text--btn{
+        background: #F0EABE;
+        color: #EC7272;
+        width: 51%;
+        height: 50px;
+        line-height: 50px;
+        outline: none;
+        border: 1px solid transparent;
+        font-size: 21px;
+        margin: auto;
+        font-family: cursive;
+        box-shadow: 2px 4px 11px #f7a76c;
+        border-radius: 8px;
+        opacity: 0;
+    }
+    /* ============================================== Animation Fire
+    */
+    /* balloon */
+    .balloon1 {
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        background: hsl(215,50%,65%);
+        border-radius: 80%;
+        position: absolute;
+        top: 0;
+        box-shadow: inset -10px -10px 0 rgb(0 0 0 / 7%);
+        margin: 20px 30px;
+        transition: transform 0.5s ease;
+        z-index: 10;
+        animation: balloons 6.7s ease-in-out infinite;
+        transform-origin: bottom center;
+        opacity: 0;
+    }
+    .balloon2 {
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        background: rgb(128, 197, 200);
+        border-radius: 80%;
+        position: absolute;
+        top: 20px;
+        right:20px;
+        box-shadow: inset -10px -10px 0 rgb(0 0 0 / 7%);
+        margin: 20px 30px;
+        transition: transform 0.5s ease;
+        z-index: 10;
+        animation: balloons 4.5s ease-in-out infinite;
+        transform-origin: bottom center;
+        opacity: 0;
+    }
+    .balloon3 {
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        background: rgba(230, 230, 169, 0.741);
+        border-radius: 80%;
+        position: absolute;
+        top: 70px;
+        left: 15px;
+        box-shadow: inset -10px -10px 0 rgb(0 0 0 / 7%);
+        margin: 20px 30px;
+        transition: transform 0.5s ease;
+        z-index: 10;
+        animation: balloons 6s ease-in-out infinite;
+        transform-origin: bottom center;
+        opacity: 0;
+    }
+    .balloon4 {
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        background: rgba(209, 153, 203, 0.82);
+        border-radius: 80%;
+        position: absolute;
+        top: 30px;
+        left: 66px;
+        box-shadow: inset -10px -10px 0 rgb(0 0 0 / 7%);
+        margin: 20px 30px;
+        transition: transform 0.5s ease;
+        z-index: 10;
+        animation: balloons 7.1s ease-in-out infinite;
+        transform-origin: bottom center;
+        opacity: 0;
+    }
+    .balloon5 {
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        background: rgba(211, 187, 133, 0.864);
+        border-radius: 80%;
+        position: absolute;
+        top: 83px;
+        right: -19px;
+        box-shadow: inset -10px -10px 0 rgb(0 0 0 / 7%);
+        margin: 20px 30px;
+        transition: transform 0.5s ease;
+        z-index: 10;
+        animation: balloons 5.9s ease-in-out infinite;
+        transform-origin: bottom center;
+        opacity: 0;
+    }
+    .balloon6 {
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        background: rgba(200, 177, 209, 0.864);
+        border-radius: 80%;
+        position: absolute;
+        top: 83px;
+        right: 91px;
+        box-shadow: inset -10px -10px 0 rgb(0 0 0 / 7%);
+        margin: 20px 30px;
+        transition: transform 0.5s ease;
+        z-index: 10;
+        animation: balloons 4.9s ease-in-out infinite;
+        transform-origin: bottom center;
+        opacity: 0;
+    }
+    .balloon7 {
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        background: rgba(161, 193, 162, 0.864);
+        border-radius: 80%;
+        position: absolute;
+        top: -10px;
+        right: -27px;
+        box-shadow: inset -10px -10px 0 rgb(0 0 0 / 7%);
+        margin: 20px 30px;
+        transition: transform 0.5s ease;
+        z-index: 10;
+        animation: balloons 6.2s ease-in-out infinite;
+        transform-origin: bottom center;
+        opacity: 0;
+    }
+    .balloon8 {
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        background: rgba(166, 204, 213, 0.864);
+        border-radius: 80%;
+        position: absolute;
+        top: 99px;
+        right: 202px;
+        box-shadow: inset -10px -10px 0 rgb(0 0 0 / 7%);
+        margin: 20px 30px;
+        transition: transform 0.5s ease;
+        z-index: 10;
+        animation: balloons 5s ease-in-out infinite;
+        transform-origin: bottom center;
+        opacity: 0;
+    }
+    .balloon9 {
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        background: rgba(216, 162, 189, 0.864);
+        border-radius: 80%;
+        position: absolute;
+        top: -7px;
+        right: 57px;
+        box-shadow: inset -10px -10px 0 rgb(0 0 0 / 7%);
+        margin: 20px 30px;
+        transition: transform 0.5s ease;
+        z-index: 10;
+        animation: balloons 4.4s ease-in-out infinite;
+        transform-origin: bottom center;
+        opacity: 0;
+    }
+    .balloon10 {
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        background: rgba(166, 206, 213, 0.864);
+        border-radius: 80%;
+        position: absolute;
+        top: 62px;
+        right: 52px;
+        box-shadow: inset -10px -10px 0 rgb(0 0 0 / 7%);
+        margin: 20px 30px;
+        transition: transform 0.5s ease;
+        z-index: 10;
+        animation: balloons 5.1s ease-in-out infinite;
+        transform-origin: bottom center;
+        opacity: 0;
+    }
+      
+    @keyframes balloons {
+        0%,100%{ 
+            transform:translateY(0) rotate(-4deg); 
+        }
+        50%{
+             transform:translateY(-25px) rotate(4deg); 
+        }
+    }
+    .balloon1:before {
+        content:"▲";
+        font-size:20px;
+        color:hsl(215,30%,50%);
+        display:block;
+        text-align:center;
+        width:100%;
+        position:absolute;
+        bottom:-12px;
+        z-index:-100;
+    }
+      
+    .balloon:nth-child(2){
+        background:hsl(245,40%,65%); animation-duration:3.5s; 
+    }
+    .balloon:nth-child(2):before {
+        color:hsl(245,40%,65%);  
+    }
+    .balloon:nth-child(3){
+        background:hsl(139,50%,60%); animation-duration:3s; }
+    .balloon:nth-child(3):before {
+        color:hsl(139,30%,50%);  
+    }  
+    .balloon:nth-child(4){
+        background:hsl(59,50%,58%); animation-duration:4.5s;
+    }
+    .balloon:nth-child(4):before { 
+        color:hsl(59,30%,52%); 
+    }  
+    .balloon:nth-child(5){
+        background:hsl(23,55%,57%); animation-duration:5s; 
+    }
+    .balloon:nth-child(5):before { 
+        color:hsl(23,44%,46%);  
     }
     @keyframes fuego {
         0%, 100% {
