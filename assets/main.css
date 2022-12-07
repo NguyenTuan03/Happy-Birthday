@@ -18,7 +18,7 @@ and (-webkit-device-pixel-ratio: 2){
     .contain {
         overflow: hidden;
         position: relative;
-        height: 725px;
+        height: 750px;
     }
     .btn {
         width: 80%;
@@ -1001,10 +1001,10 @@ and (-webkit-device-pixel-ratio: 2){
       
     @keyframes balloons {
         0%,100%{ 
-            transform:translateY(0) rotate(-4deg); 
+            transform:translateY(10px) rotate(-4deg); 
         }
         50%{
-             transform:translateY(-25px) rotate(4deg); 
+             transform:translateY(-15px) rotate(4deg); 
         }
     }
     .balloon1:before {
@@ -1041,6 +1041,212 @@ and (-webkit-device-pixel-ratio: 2){
     }
     .balloon:nth-child(5):before { 
         color:hsl(23,44%,46%);  
+    }
+    .Dream {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background-color: #000;
+        display: none;
+    }
+    .moon {
+        box-sizing: border-box;
+        position: absolute;
+        border-radius: 100%;
+        height: 120px;
+        width: 120px;
+        overflow: hidden;
+        bottom: 60px;
+        left: 40px;
+    }
+    .moon-btn {
+        position: absolute;
+        top: 16px;
+        width: 58px;
+        height: 20px;
+        background: #976a31;
+        z-index: 1;
+        left: 31px;
+        border-radius: 10px;
+        text-align: center;
+        color: #e4dedc;
+        box-shadow: 0px 4px 6px #c24831;
+    }
+    .surface {
+        position: absolute;
+        border-radius: 100%;
+        height: 140%;
+        width: 140%;
+        top: -30%;
+        right: -10%;
+        box-sizing: border-box;
+        border: 30px solid rgba(0, 0, 0, 0.15);
+        background: #ff5f40;
+    }
+    .carpet1 {
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        top: 32%;
+        left: 17%;
+        box-shadow: inset 2px 2px 0 rgb(0 0 0 / 20%);
+        border-radius: 50%;
+        background: #0000003d;
+    }
+    .carpet2 {
+        position: absolute;
+        height: 10px;
+        width: 10px;
+        top: 26%;
+        left: 55%;
+        box-shadow: inset 2px 2px 0 rgb(0 0 0 / 20%);
+        border-radius: 50%;
+        background: #0000003d;
+    }
+    .carpet3 {
+        position: absolute;
+        height: 10px;
+        width: 10px;
+        top: 60%;
+        left: 40%;
+        box-shadow: inset 2px 2px 0 rgb(0 0 0 / 20%);
+        border-radius: 50%;
+        background: #0000003d;
+    }
+    .rocket {
+        position: absolute;
+        bottom: 190px;
+        width: 61px;
+        left: 74px;
+    }
+    .rocket-body {
+        width: 52px;
+    }
+    .rocket-body::before {
+        content: "";
+        position: absolute;
+        left: calc(50% - 26px);
+        width: 42px;
+        height: 10px;
+        background-color: #554842;
+        bottom: -10px;
+        border-bottom-right-radius: 60%;
+        border-bottom-left-radius: 60%;
+    }
+    .body {
+        background-color: #dadada;
+        height: 100px;
+        left: calc(50% - 50px);
+        border-top-right-radius: 100%;
+        border-top-left-radius: 100%;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+        border-top: 5px solid #f5f5f5;
+    }
+    .fin {
+        position: absolute;
+        height: 29px;
+        width: 25px;
+        background-color: #a75248;
+    }
+    .fin-left {
+        left: -25px;
+        top: calc(100% - 48px);
+        border-top-left-radius: 80%;
+        border-bottom-left-radius: 20%;
+    }
+    .fin-right {
+        right: -16px;
+        top: calc(100% - 48px);
+        border-top-right-radius: 80%;
+        border-bottom-right-radius: 20%;
+    }
+    .window {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        background-color: #a75248;
+        left: calc(50% - 24px);
+        top: 35px;
+        border: 4px solid #b4b2b2;
+    }
+    .window-img {
+        background-image: url(../Music/z3929534712725_bcce586b57af6803bd91ac475dba93fa.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 100%;    
+        border-radius: 50%;
+    }
+    .dream-text {
+        position: absolute;
+        width: 118px;
+        height: 95px;
+        color: #fff;
+        bottom: 127px;
+        right: 25%;
+        font-size: 18px;
+        font-family: cursive;
+    }
+    .dream-msg::placeholder {
+        text-align: center;
+        color: #000;
+        font-size: 18px;
+    }
+    .dream-contain--msg {
+        position: absolute;
+        right: 35px;
+        bottom: 240px;
+        width: 194px;
+        height: 76px;
+    }
+    .dream-msg {
+        border: none;
+        outline: none;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        border-radius: 23px;
+        background: #e1daae;
+        padding: 10px 8px;
+        animation: SlideIn 2s ease-in;
+    }   
+    .dream-arrow {
+        position: absolute;
+        right: lef;
+        left: 43%;
+        bottom: 256px;
+        width: 0;
+        height: 0;
+        border-top: 8px solid transparent;
+        border-bottom: 13px solid transparent;
+        border-right: 13px solid #e1daae;
+        transform: rotate(103deg);
+        animation: SlideIn 2s ease-in;    
+    }
+    .arrow {
+        background-image: url(../Music/output-onlinegiftools\ \(1\).gif);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 36px;
+        height: 50px;
+        position: absolute;
+        right: 14%;
+        bottom: 182px;
+        animation: opacity 2s ease-in;
+    }
+    .star-blink {
+        background-image: url(../Music/starblink.gif);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 103px;
+        height: 100px;
+        position: absolute;
+        right: -38px;
+        top: -37px;
+        animation: opacity 2s ease-in;
+        display: none;
     }
     @keyframes fuego {
         0%, 100% {

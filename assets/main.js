@@ -521,13 +521,6 @@ function cake()
                     opacity:1
                 })
             )
-        // setTimeout(() => {
-        //     timeLine
-        //         .to(WishBtn, 0.5,{
-        //             y:0,
-        //             opacity:1
-        //         })
-        // }, 10000);
         WishBtn.onclick = function()
         {
             document.querySelector('.text-para').style.display = 'none'
@@ -535,60 +528,151 @@ function cake()
                 paused: false
             });
             timeLine
-            .to(WishBtn, 0.8, {
-                height: 0.2,
-                opacity: 0.5,
-                boxShadow: "0px 0px 35px 7px #cd28fa",
-                delay: 0.25
-            })
-            .to(WishBtn, 0.1, {
-                opacity: 0.5,
-                background: "#26ff92"
-            })
-            .to(WishBtn, 0, {
-                width: 1,
-                delay: 0.2
-            })
-            .to(WishBtn, 0.1, {
-                boxShadow: "0px 0px 100px 55px #bc97ceaa",
-                y: 90,
-                height: 100,
-                delay: 0.23
-            })
-            .to(WishBtn, 0.3, {
-                height: 1000,
-                y: -1500,
-                boxShadow: "0px 0px 85px 17px #e778d6",
-                delay: 0.2
-            })
-            
-            // setTimeout(() => {
-            //     cakeContain.style.display = 'none';
-            //     cakeContain.style.transition = 'all 2s ease-in'
-            //     dream.style.display = 'block';
-            //     dream.style.animation = 'opacity 2s ease-in'
-            //     LaunchRocket();
-            //     for (var i=0;i<150;i++)
-            //     {
-            //         var div = document.createElement("div");
-            //         var randomLeft =Math.floor(Math.random()* width);
-            //         var randomTop =Math.floor(Math.random()* height);
-            //         var border = Math.floor(Math.random()*2);
-            //         var widthElement = Math.floor(Math.random()*2)+3;
-            //         var timeanimation = Math.floor(Math.random()*3)+2;
-            //         div.style.backgroundColor = 'rgba(255,255,200,0.8)';
-            //         div.style.borderRadius = borderStar[border];
-            //         div.style.content = '⭐';
-            //         div.style.position = 'absolute';
-            //         div.style.width = widthElement + 'px';
-            //         div.style.height = widthElement + 'px';
-            //         div.style.marginLeft = randomLeft + 'px';
-            //         div.style.marginTop = randomTop + 'px';
-            //         div.style.animation = 'star ' + timeanimation+ 's ease-in infinite';
-            //         dreamStar.appendChild(div);
-            //     }
-            // }, 3000);
+                .to(WishBtn, 0.8, {
+                    height: 0.2,
+                    opacity: 0.5,
+                    boxShadow: "0px 0px 35px 7px #cd28fa",
+                    delay: 0.25
+                })
+                .to(WishBtn, 0.1, {
+                    opacity: 0.5,
+                    background: "#26ff92"
+                })
+                .to(WishBtn, 0, {
+                    width: 1,
+                    delay: 0.2
+                })
+                .to(WishBtn, 0.1, {
+                    boxShadow: "0px 0px 100px 55px #bc97ceaa",
+                    y: 90,
+                    height: 100,
+                    delay: 0.23
+                })
+                .to(WishBtn, 0.3, {
+                    height: 1000,
+                    y: -1500,
+                    boxShadow: "0px 0px 85px 17px #e778d6",
+                    delay: 0.2
+                })
+            sleep(3000)
+                .then()
+                {
+                    cakeContain.style.display = 'none';
+                    cakeContain.style.transition = 'all 2s ease-in'
+                    dream.style.display = 'block';
+                    dream.style.animation = 'opacity 2s ease-in'
+                    LaunchRocket();
+                    for (var i=0;i<150;i++)
+                    {
+                        var div = document.createElement("div");
+                        var randomLeft =Math.floor(Math.random()* width);
+                        var randomTop =Math.floor(Math.random()* height);
+                        var border = Math.floor(Math.random()*2);
+                        var widthElement = Math.floor(Math.random()*2)+3;
+                        var timeanimation = Math.floor(Math.random()*3)+2;
+                        div.style.backgroundColor = 'rgba(255,255,200,0.8)';
+                        div.style.borderRadius = borderStar[border];
+                        div.style.content = '⭐';
+                        div.style.position = 'absolute';
+                        div.style.width = widthElement + 'px';
+                        div.style.height = widthElement + 'px';
+                        div.style.marginLeft = randomLeft + 'px';
+                        div.style.marginTop = randomTop + 'px';
+                        div.style.animation = 'star ' + timeanimation+ 's ease-in infinite';
+                        dreamStar.appendChild(div);
+                    }
+                }
         }
+}
+function LaunchRocket()
+{
+    var dreamArrow = document.querySelector('.dream-arrow');
+    var Arrow = document.querySelector('.arrow');
+    var dreamMsg = document.querySelector('.dream-contain--msg');
+    var dreamText = document.querySelector('.dream-text');
+    var moonBtn = document.querySelector('.moon-btn');
+    var rocket = document.querySelector('.rocket');
+    var starBklink = document.querySelector('.star-blink');
+    var string = 'Gửi điều ước vào đây và phóng chúng vào vì sao nào';
+    var str = string.split('');
+    function animate()
+    {
+        str.length > 0 ? dreamText.innerHTML += str.shift() : clearTimeout(running);
+        var running = setTimeout(animate,40);
+    }
+    setTimeout(animate,1000);     
+    var timeLine = new TimelineMax({
+        paused: false
+    });
+    moonBtn.onclick = function()
+    {
+        setTimeout(() => {
+            dreamMsg.style.right = '168px'
+            dreamMsg.style.bottom = '260px'
+            dreamMsg.style.transition = 'all 1s ease-in'
+        }, 4000);
+        timeLine
+            .to(dreamArrow,0.5,{
+                opacity:0
+            })
+            .to(Arrow,0.5,{
+                opacity:0
+            })
+            .to(dreamMsg,1,{
+                rotation: 150,
+                delay:1
+            })
+            .to(dreamMsg,1,{
+                x:-140,
+                y:48,
+                width:0,
+            })
+            .to(dreamMsg,0.5,{
+                opacity:0,
+                delay:1.5
+            })
+            .to(rocket,2,{
+                y:-100,
+                delay:2
+            })
+            .to(rocket,1.5,{
+                rotation: 80,
+                y:-180,
+                x:230,
+                delay:0
+            })
+            .to(rocket,2,{
+                rotation: 0,
+            })
+            .to(rocket,2,{
+                rotation: -60,
+                y:-260,
+                x:-40,
+            })
+            .to(rocket,2,{
+                rotation: 0,
+            })
+            .to(rocket,0.5,{
+                rotation: 50,
+                y:-670,
+                x:550,
+            })
+            sleep(3000)
+                .then(function()
+                {
+                    document.querySelector('.dream-text').style.display = 'none';
+                    document.querySelector('.dream-text').style.transition = 'all 1s ease-in';
+                    return sleep(14500)
+                })
+                .then(function(){
+                    starBklink.style.display = 'block';
+                    return sleep(18500)
+                })
+                .then(function(){
+                    starBklink.style.display = 'none';
+                    starBklink.style.transition = 'all 2s'
+                })
+    }
 }
 function sendBtn()
 {
