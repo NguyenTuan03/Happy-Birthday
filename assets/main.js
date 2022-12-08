@@ -15,7 +15,7 @@ var blursArray = ['0px','2px'];// Lấy dộ mờ
 var colorsArray = ['#FBFACD','orange','#00E7FF'];
 var width = document.documentElement.clientWidth;
 var height = document.documentElement.clientHeight;
-var count1 = 100;
+var count1 = 150;
 function star()
 {
     for (var i=0;i<count1;i++)
@@ -126,8 +126,9 @@ function formvalidate()
                 ImgWrong.style.display = 'block';
                 ImgWrong.style.animation = 'opacity 1s ease-in';
                 audioAnserwrong.play();
-                    setTimeout(() =>{
-                        form.style.display = 'block';
+                    sleep(7000)
+                        .then(function(){
+                            form.style.display = 'block';
                         timeLine
                             .to(formImg,0, {
                                 opacity: 0            
@@ -156,7 +157,7 @@ function formvalidate()
                             })        
                         ImgWrong.style.display = 'none';
                         audio.play();
-                    },7000)
+                        })
             }
             else {  
                 audio.pause();
@@ -392,25 +393,27 @@ function birthdayCard()
             y:0,
             opacity:1
         })
-        setTimeout(()=> {
-            birthdaytext1.style.display = 'block'
-            birthdaytext2.style.display = 'block'
-            birthdaytext3.style.display = 'block'
-            birthdaytext4.style.display = 'block'
-            birthdaytext5.style.display = 'block'
-            birthdaytext6.style.display = 'block'
-            birthdaytext7.style.display = 'block'
-            birthdaytext8.style.display = 'block'
-            birthdaytext9.style.display = 'block'
-            birthdaytext10.style.display = 'block'
-            birthdaytext11.style.display = 'block'
-            birthdaytext12.style.display = 'block'
-            birthdaytext13.style.display = 'block'
-            showText();
-        },6000)
-        setTimeout(()=>{
-            document.querySelector('.birthday-heart').style.display = 'block';
-        },8000)
+        sleep(6000)
+            .then(function(){
+                birthdaytext1.style.display = 'block'
+                birthdaytext2.style.display = 'block'
+                birthdaytext3.style.display = 'block'
+                birthdaytext4.style.display = 'block'
+                birthdaytext5.style.display = 'block'
+                birthdaytext6.style.display = 'block'
+                birthdaytext7.style.display = 'block'
+                birthdaytext8.style.display = 'block'
+                birthdaytext9.style.display = 'block'
+                birthdaytext10.style.display = 'block'
+                birthdaytext11.style.display = 'block'
+                birthdaytext12.style.display = 'block'
+                birthdaytext13.style.display = 'block'
+                showText();
+                return sleep(2000)
+            })
+            .then(function(){
+                document.querySelector('.birthday-heart').style.display = 'block';
+            })
     var birthdayText = document.querySelector('.birthday-text');
     var string = 'Dear darling, Thêm một chủi mới chúc bé có nhiều niềm vui trong cuộc sống và đặc biệt là gặt hái được nhiều thành công';
     var str = string.split('');
@@ -420,8 +423,9 @@ function birthdayCard()
         var running = setTimeout(animate,40);
     }
     setTimeout(animate,21000);
-    setTimeout(()=> {
-        timeLine
+    sleep(29000)
+        .then(function(){
+            timeLine
             .to(BirthdayBtn,0.5,{
                 opacity:0.1,
                 x:70
@@ -430,7 +434,7 @@ function birthdayCard()
                 opacity:1,
                 x:0
             })
-    },29000);
+        })
     BirthdayBtn.onclick = function()
     {
         cake();
@@ -525,13 +529,13 @@ function cake()
             opacity:1
         })
         sleep(10000)
-            .then(
+            .then(function(){
                 timeLine
                 .to(WishBtn, 0.5,{
                     y:0,
                     opacity:1
                 })
-            )
+            })
         WishBtn.onclick = function()
         {
             document.querySelector('.text-para').style.display = 'none'
@@ -600,8 +604,8 @@ function LaunchRocket()
     var dreamArrow = document.querySelector('.dream-arrow');
     var Arrow = document.querySelector('.arrow');
     var dreamMsg = document.querySelector('.dream-contain--msg');
-    var dreamText = document.querySelector('.dream-text');
     var moonBtn = document.querySelector('.moon-btn');
+    var dreamText = document.querySelector('.dream-text');
     var rocket = document.querySelector('.rocket');
     var starBklink = document.querySelector('.star-blink');
     var string = 'Gửi điều ước vào đây và phóng chúng vào vì sao nào';
@@ -683,6 +687,24 @@ function LaunchRocket()
                     starBklink.style.display = 'none';
                     starBklink.style.transition = 'all 2s'
                 })
+            getData()
+                .then((data) => {
+                    console.log(data.data);
+                })
+    }
+    var api = 'http://localhost:3000/comment';
+    async function getData() 
+    {
+        var input = document.querySelector('.dream-msg').value;
+        try {
+            let data = axios.put(api+'/'+1,{
+                desc: input
+            })
+            return data;
+        }
+        catch(e){
+            console.log(e)
+        }
     }
 }
 function sendBtn()
