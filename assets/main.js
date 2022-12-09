@@ -621,6 +621,7 @@ function LaunchRocket()
     });
     moonBtn.onclick = function()
     {
+        audioBirthday.pause();
         setTimeout(() => {
             dreamMsg.style.right = '168px'
             dreamMsg.style.bottom = '260px'
@@ -685,27 +686,35 @@ function LaunchRocket()
                 })
                 .then(function(){
                     starBklink.style.display = 'none';
-                    starBklink.style.transition = 'all 2s'
+                    starBklink.style.transition = 'all 2s';
                 })
-            getData()
-                .then((data) => {
-                    console.log(data.data);
-                })
+                setTimeout(() => {
+                    dream.style.display = 'none';
+                    document.querySelector('#drag-container').style.zIndex = 999;
+                    document.querySelector('#drag-container').style.display = 'block';
+                    document.querySelector('#spin-container').style.top = '30%';
+                    document.querySelector('#spin-container').style.display = 'block';
+                    carousel();
+                }, 20000);
     }
-    var api = 'http://localhost:3000/comment';
-    async function getData() 
-    {
-        var input = document.querySelector('.dream-msg').value;
-        try {
-            let data = axios.put(api+'/'+1,{
-                desc: input
-            })
-            return data;
-        }
-        catch(e){
-            console.log(e)
-        }
-    }
+    //         getData()
+    //             .then((data) => {
+    //                 console.log(data.data);
+    //             })
+    //         var api = 'http://localhost:3000/comment';
+    // async function getData() 
+    // {
+    //     var input = document.querySelector('.dream-msg').value;
+    //     try {
+    //         let data = axios.put(api+'/'+1,{
+    //             desc: input
+    //         })
+    //         return data;
+    //     }
+    //     catch(e){
+    //         console.log(e)
+    //     }
+    // }
 }
 function sendBtn()
 {
@@ -725,6 +734,108 @@ function sleep(ms)
     return new Promise(function(resolve){
         setTimeout(resolve, ms);
     })
+}
+function carousel()
+{
+    var radius = 240; // how big of the radius
+var autoRotate = true; // auto rotate or not
+var rotateSpeed = -60; // unit: seconds/360 degrees
+var imgWidth = 170; // width of images (unit: px)
+var imgHeight = 200; // height of images (unit: px)
+setTimeout(init, 1000);
+
+var odrag = document.getElementById('drag-container');
+var ospin = document.getElementById('spin-container');
+var aImg = ospin.getElementsByTagName('img');
+var aVid = ospin.getElementsByTagName('video');
+var aEle = [...aImg, ...aVid]; // combine 2 arrays
+
+// Size of images
+ospin.style.width = imgWidth + "px";
+ospin.style.height = imgHeight + "px";
+
+// Size of ground - depend on radius
+var ground = document.getElementById('ground');
+ground.style.width = radius * 3 + "px";
+ground.style.height = radius * 3 + "px";
+
+function init(delayTime) {
+  for (var i = 0; i < aEle.length; i++) {
+    aEle[i].style.transform = "rotateY(" + (i * (360 / aEle.length)) + "deg) translateZ(" + radius + "px)";
+    aEle[i].style.transition = "transform 1s";
+    aEle[i].style.transitionDelay = delayTime || (aEle.length - i) / 4 + "s";
+  }
+}
+
+function applyTranform(obj) {
+  // Constrain the angle of camera (between 0 and 180)
+  if(tY > 180) tY = 180;
+  if(tY < 0) tY = 0;
+
+  // Apply the angle
+  obj.style.transform = "rotateX(" + (-tY) + "deg) rotateY(" + (tX) + "deg)";
+}
+
+function playSpin(yes) {
+  ospin.style.animationPlayState = (yes?'running':'paused');
+}
+
+var sX, sY, nX, nY, desX = 0,
+    desY = 0,
+    tX = 0,
+    tY = 10;
+
+// auto spin
+if (autoRotate) {
+  var animationName = (rotateSpeed > 0 ? 'spin' : 'spinRevert');
+  ospin.style.animation = `${animationName} ${Math.abs(rotateSpeed)}s infinite linear`;
+}
+// setup events
+document.onpointerdown = function (e) {
+  clearInterval(odrag.timer);
+  e = e || window.event;
+  var sX = e.clientX,
+      sY = e.clientY;
+
+  this.onpointermove = function (e) {
+    e = e || window.event;
+    var nX = e.clientX,
+        nY = e.clientY;
+    desX = nX - sX;
+    desY = nY - sY;
+    tX += desX * 0.1;
+    tY += desY * 0.1;
+    applyTranform(odrag);
+    sX = nX;
+    sY = nY;
+  };
+
+  this.onpointerup = function (e) {
+    odrag.timer = setInterval(function () {
+      desX *= 0.95;
+      desY *= 0.95;
+      tX += desX * 0.1;
+      tY += desY * 0.1;
+      applyTranform(odrag);
+      playSpin(false);
+      if (Math.abs(desX) < 0.5 && Math.abs(desY) < 0.5) {
+        clearInterval(odrag.timer);
+        playSpin(true);
+      }
+    }, 17);
+    this.onpointermove = this.onpointerup = null;
+  };
+
+  return false;
+};
+
+document.onmousewheel = function(e) {
+  e = e || window.event;
+  var d = e.wheelDelta / 20 || -e.detail;
+  radius += d;
+  init(1);
+};
+
 }
 sendBtn();
 star()
