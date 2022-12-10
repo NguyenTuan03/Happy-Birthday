@@ -696,7 +696,30 @@ function LaunchRocket()
                     document.querySelector('#spin-container').style.display = 'block';
                     carousel();
                 }, 20000);
-    }
+                var string = 'Có thể xem nếu thích nhé❤️->';
+                var btsNote = document.querySelector('.bts-note');
+                var str = string.split('');
+                function animate()
+                {
+                    str.length > 0 ? btsNote.innerHTML += str.shift() : clearTimeout(running);
+                    var running = setTimeout(animate,80);
+                }
+                setTimeout(animate,20000);
+                document.querySelector('.bts').onclick = function()
+                {
+                    document.querySelector('#spin-container .video-1').pause();
+                    document.querySelector('#spin-container .video-2').pause();
+                    document.querySelector('#spin-container .video-3').pause();
+                    document.querySelector('#spin-container .video-4').pause();
+                    document.querySelector('#spin-container .video-5').pause();
+                    document.querySelector('#spin-container .video-6').pause();
+                    document.querySelector('.behind-the-scenes').style.display = 'block';
+                    document.querySelector('.behind-the-scenes').style.transition = 'all 2s ease-in';
+                    document.querySelector('#drag-container').style.display = 'none';
+                    document.querySelector('#spin-container').style.display = 'none';
+                    bts();
+                }
+    }   
     //         getData()
     //             .then((data) => {
     //                 console.log(data.data);
@@ -715,6 +738,18 @@ function LaunchRocket()
     //         console.log(e)
     //     }
     // }
+}
+function bts()
+{
+    var string = 'Behind The Scenes';
+    var btsText = document.querySelector('.bts-text');
+    var str = string.split('');
+    function animate()
+    {
+        str.length > 0 ? btsText.innerHTML += str.shift() : clearTimeout(running);
+        var running = setTimeout(animate,80);
+    }
+    setTimeout(animate,2000);
 }
 function sendBtn()
 {

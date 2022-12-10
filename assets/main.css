@@ -1402,6 +1402,81 @@ and (-webkit-device-pixel-ratio: 2){
                   transform: rotateY(0deg);
         }
       }
+    /* BTS */
+    .bts-note {
+        position: absolute;
+        bottom: 30px;
+        left: 60px;
+        font-size: 19px;
+        height: 20px;
+        line-height: 20px;
+        text-align: center;
+        font-family: cursive;
+        color: aquamarine;
+    }
+    .bts {
+        position: absolute;
+        width: 40px;
+        text-align: center;
+        height: 25px;
+        line-height: 25px;
+        bottom: 25px;
+        right: 37px;
+        font-size: 22px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        background: #e7ee47a1;
+        border-radius: 10px;
+    }
+    .behind-the-scenes {
+        height: 100%;
+        width: 100%;
+        background-color: #e1b39e;
+        display: none;
+    }
+    .bts-text {
+        position: absolute;
+        top: 20%;
+        letter-spacing: 5px;
+        left: 50%;
+        align-items: center;
+        transform: translateX(-50%);
+        width: 297px;
+        font-size: 27px;
+        font-family: ui-serif;
+        color: black;
+    }
+    .bts-mac {
+        background-image: url(../Music/macbook-removebg-preview.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 340px;
+        height: 340px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%) scale(1.5)
+    }
+    .bts-video {
+        position: absolute;
+        left: 50%;
+        top: 46.7%;
+        transform: translate(-50%,-50%) scale(2.1);
+        width: 207px;
+        height: 125px;
+        text-align: center;
+    }
+    .thanks {
+        position: absolute;
+        bottom: 20%;
+        letter-spacing: 5px;
+        left: 50%;
+        align-items: center;
+        transform: translateX(-50%);
+        width: 297px;
+        font-size: 27px;
+        font-family: ui-serif;
+        color: #18143c;
+    }
     @keyframes fuego {
         0%, 100% {
             background: rgba(254, 248, 97, 0.5);
