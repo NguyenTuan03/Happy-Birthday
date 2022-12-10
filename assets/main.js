@@ -621,7 +621,7 @@ function LaunchRocket()
     });
     moonBtn.onclick = function()
     {
-        audioBirthday.pause();
+        audioBirthday.pause(); 
         setTimeout(() => {
             dreamMsg.style.right = '168px'
             dreamMsg.style.bottom = '260px'
@@ -740,8 +740,8 @@ function carousel()
     var radius = 240; // how big of the radius
 var autoRotate = true; // auto rotate or not
 var rotateSpeed = -60; // unit: seconds/360 degrees
-var imgWidth = 170; // width of images (unit: px)
-var imgHeight = 200; // height of images (unit: px)
+var imgWidth = 263; // width of images (unit: px)
+var imgHeight = 244; // height of images (unit: px)
 setTimeout(init, 1000);
 
 var odrag = document.getElementById('drag-container');
