@@ -2,7 +2,7 @@
 @media only screen 
 and (device-width: 414px) 
 and (device-height: 896px) 
-and (-webkit-device-pixel-ratio: 2){ 
+and (-webkit-device-pixel-ratio: 3){ 
     /* Styles */
     * {
         padding: 0;
@@ -1446,28 +1446,28 @@ and (-webkit-device-pixel-ratio: 2){
         color: black;
     }
     .bts-mac {
-        background-image: url(../Music/macbook-removebg-preview.png);
+        background-image: url(../Music/ip11-removebg-preview.png);
         background-repeat: no-repeat;
         background-size: contain;
-        width: 340px;
-        height: 340px;
+        width: 874px;
+        height: 785px;
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%,-50%) scale(1.5)
+        transform: translate(-50%,-50%);
     }
     .bts-video {
         position: absolute;
         left: 50%;
-        top: 46.7%;
-        transform: translate(-50%,-50%) scale(2.1);
-        width: 207px;
-        height: 125px;
+        top: 50.7%;
+        transform: translate(-50%,-50%) scale(1.1);
+        width: 225px;
+        height: 449px;
         text-align: center;
     }
     .thanks {
         position: absolute;
-        bottom: 20%;
+        bottom: 7%;
         letter-spacing: 5px;
         left: 50%;
         align-items: center;
