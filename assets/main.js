@@ -47,6 +47,7 @@ function formvalidate()
     var ImgWrong = document.querySelector('.image-wrong');
     var Imgbaby1 = document.querySelector('.form-img__baby-flower');
     var Imgbaby2 = document.querySelector('.form-img__baby-flower1');
+    var formArrow = document.querySelector('.form-arrow');
     form.style.display = 'block';
     var timeLine = new TimelineMax({
         paused: false
@@ -59,6 +60,9 @@ function formvalidate()
             opacity:0,
         })
         .to(formbtn,0,{
+            opacity:0,
+        })
+        .to(formArrow,0,{
             opacity:0,
         })
         .to(Imgbaby1,0,{
@@ -96,6 +100,9 @@ function formvalidate()
         })
         .to(formbtn,0.3,{
             height:30,
+            opacity:1,
+        })
+        .to(formArrow,0.3,{
             opacity:1,
         })
         .to(Imgbaby1,0.6,{
@@ -739,6 +746,7 @@ function LaunchRocket()
     //     }
     // }
 }
+// LaunchRocket();
 function bts()
 {
     var string = 'Behind The Scenes';
@@ -751,6 +759,7 @@ function bts()
     }
     setTimeout(animate,2000);
 }
+// bts();
 function sendBtn()
 {
     //Hàm to(phần tử được chọn,thời gian di chuyển,
