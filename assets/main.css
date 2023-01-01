@@ -1418,7 +1418,7 @@ and (-webkit-device-pixel-ratio: 2){
     .bts-note {
         position: absolute;
         bottom: 30px;
-        left: 60px;
+        left: 50px;
         font-size: 19px;
         height: 20px;
         line-height: 20px;
@@ -1428,12 +1428,12 @@ and (-webkit-device-pixel-ratio: 2){
     }
     .bts {
         position: absolute;
-        width: 40px;
+        width: 100px;
         text-align: center;
-        height: 25px;
-        line-height: 25px;
+        height: 50px;
+        line-height: 50px;
         bottom: 25px;
-        right: 50px;
+        right: 90px;
         font-size: 22px;
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         background: #e7ee47a1;
