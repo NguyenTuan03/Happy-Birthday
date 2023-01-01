@@ -28,7 +28,7 @@ and (-webkit-device-pixel-ratio: 2){
         left: 50%;
         transform: translate(-50%,-50%);
         cursor: pointer;
-        z-index: 3;
+        z-index: 2;
         /* display: none; */
     }
     .btn p {
@@ -1433,7 +1433,7 @@ and (-webkit-device-pixel-ratio: 2){
         height: 50px;
         line-height: 50px;
         bottom: 25px;
-        right: 90px;
+        right: 70px;
         font-size: 22px;
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         background: #e7ee47a1;
