@@ -29,7 +29,7 @@ and (-webkit-device-pixel-ratio: 2){
         transform: translate(-50%,-50%);
         cursor: pointer;
         z-index: 2;
-        /* display: none; */
+        display: none;
     }
     .btn p {
         text-transform: uppercase;
@@ -230,7 +230,7 @@ and (-webkit-device-pixel-ratio: 2){
         top: 0;
         left: 0;
         right: 0;
-        background: linear-gradient(to bottom, #cc66ff 48%, #9900ff 89%);
+        background: linear-gradient(to bottom, #BDA0BA 48%, #A084CA 89%);
         opacity: 1;
         display: none;
     }
@@ -250,26 +250,26 @@ and (-webkit-device-pixel-ratio: 2){
     .img-content1 {
         position: absolute;
         top: 60%;
-        color: #fff;
+        color: #FFE4BF;
         width: 100%;
         left: 0;
         right: 0;
         text-align: center;
         letter-spacing: 1.3px;
-        font-size: 22px;
+        font-size: 30px;
         animation: fadeInOut 2s ease-in both;
         animation-delay: 2s;
     }
     .img-content2 {
         position: absolute;
         top: 60%;
-        color: #fff;
+        color: #FFE4BF;
         width: 100%;
         left: 0;
         right: 0;
         text-align: center;
         letter-spacing: 1.3px;
-        font-size: 22px;
+        font-size: 30px;
         animation: fadeInOut 2s ease-in both;
         animation-delay: 5s;
     }
@@ -1123,47 +1123,45 @@ and (-webkit-device-pixel-ratio: 2){
         height: 37px;
         animation: meteor 1.5s ease-in-out infinite;
         animation-delay: 1s;
-      }    
-      .night li:nth-child(5)
-      {
-        opacity: 0;
-        top:20%;
-        left:55%;
-        width:1px;
-        height: 15px;
-        animation: meteor 1.5s infinite linear;
-      }
-      @keyframes meteor
-      {
-        10%
-        {
+    }    
+    .night li:nth-child(5)
+    {
+      opacity: 0;
+      top:20%;
+      left:55%;
+      width:1px;
+      height: 15px;
+      animation: meteor 1.5s infinite linear;
+    }
+    @keyframes meteor
+    {
+        10% {
             opacity: 2;
         }
-        80%	
-        {
+        80%	{
             left: 5%;
             top:  85%;
             opacity: 0;
         }
+    }
+    
+    .planet {
+        width: 160px;
+        height: 160px;
+        background-image: url('../Music/anh-galaxy-vu-tru-dep-nhat.jpg');
+        border-radius: 50%;
+        background-size: cover;
+        box-shadow: -80px -20px 70px 2px rgb(29, 28, 28) inset, 3px 0 20px rgba(206, 182, 138, 0.555);
+        animation: spinPlanet 10s linear reverse infinite;
+        transform: rotate(30deg);
+        backface-visibility: hidden;
+    }
+    
+    @keyframes spinPlanet {
+        50% {
+          background-position: 100%;
       }
-      
-      .planet {
-          width: 160px;
-          height: 160px;
-          background-image: url('../Music/anh-galaxy-vu-tru-dep-nhat.jpg');
-          border-radius: 50%;
-          background-size: cover;
-          box-shadow: -80px -20px 70px 2px rgb(29, 28, 28) inset, 3px 0 20px rgba(206, 182, 138, 0.555);
-          animation: spinPlanet 10s linear reverse infinite;
-          transform: rotate(30deg);
-          backface-visibility: hidden;
-      }
-      
-      @keyframes spinPlanet {
-          50% {
-            background-position: 100%;
-        }
-      }
+    }
     .moon-btn {
         position: absolute;
         top: 16px;
@@ -1433,7 +1431,7 @@ and (-webkit-device-pixel-ratio: 2){
         height: 50px;
         line-height: 50px;
         bottom: 25px;
-        right: 70px;
+        right: 50px;
         font-size: 22px;
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         background: #e7ee47a1;

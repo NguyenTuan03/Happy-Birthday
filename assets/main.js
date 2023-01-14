@@ -182,6 +182,7 @@ function formvalidate()
             }   
         }            
 }
+formvalidate();
 function birthdayCard()
 {
     document.querySelector('body').style.backgroundColor = 'rgb(219 201 181)';
@@ -695,6 +696,9 @@ function LaunchRocket()
                     starBklink.style.display = 'none';
                     starBklink.style.transition = 'all 2s';
                 })
+            setTimeout(()=> {
+                document.querySelector(".dream-audio").play();
+            },18000)
                 setTimeout(() => {
                     dream.style.display = 'none';
                     document.querySelector('#drag-container').style.zIndex = 999;
