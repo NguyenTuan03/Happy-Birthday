@@ -182,7 +182,6 @@ function formvalidate()
             }   
         }            
 }
-formvalidate()
 function birthdayCard()
 {
     document.querySelector('body').style.backgroundColor = 'rgb(219 201 181)';
@@ -690,11 +689,11 @@ function LaunchRocket()
                 })
                 .then(function(){
                     document.querySelector(".dream-audio").play();
-                    return sleep(1000);
+                    return sleep(500);
                 })
                 .then(function(){
                     starBklink.style.display = 'block';
-                    return sleep(3000)
+                    return sleep(2000)
                 })
                 .then(function(){
                     starBklink.style.display = 'none';
