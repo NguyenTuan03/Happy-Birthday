@@ -182,7 +182,7 @@ function formvalidate()
             }   
         }            
 }
-formvalidate();
+formvalidate()
 function birthdayCard()
 {
     document.querySelector('body').style.backgroundColor = 'rgb(219 201 181)';
@@ -689,16 +689,17 @@ function LaunchRocket()
                     return sleep(14500)
                 })
                 .then(function(){
+                    document.querySelector(".dream-audio").play();
+                    return sleep(1000);
+                })
+                .then(function(){
                     starBklink.style.display = 'block';
-                    return sleep(18500)
+                    return sleep(3000)
                 })
                 .then(function(){
                     starBklink.style.display = 'none';
                     starBklink.style.transition = 'all 2s';
                 })
-            setTimeout(()=> {
-                document.querySelector(".dream-audio").play();
-            },18000)
                 setTimeout(() => {
                     dream.style.display = 'none';
                     document.querySelector('#drag-container').style.zIndex = 999;
