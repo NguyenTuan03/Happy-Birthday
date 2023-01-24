@@ -422,12 +422,12 @@ function birthdayCard()
                 document.querySelector('.birthday-heart').style.display = 'block';
             })
     var birthdayText = document.querySelector('.birthday-text');
-    var string = 'Dear darling, Thêm một chủi mới chúc bé có nhiều niềm vui trong cuộc sống và đặc biệt là gặt hái được nhiều thành công';
+    var string = 'Dear darling, chúc bé có tuổi 20 thật đẹp đẽ và có nhiều niềm vui trong cuộc sống, và đặc biệt là gặt hái được nhiều thành công. Cho tau cơ hội để tìm hiểu mei nhiều hơn nhé !. Thay mặt Đảng, Chính phủ, các vị bộ trưởng và toàn thể nhân dân Việt Nam cùng hơn 7 tỷ nhân dân trên thế giới, chúc mừng sinh nhật ạ !! ♥️';
     var str = string.split('');
     function animate()
     {
         str.length > 0 ? birthdayText.innerHTML += str.shift() : clearTimeout(running);
-        var running = setTimeout(animate,40);
+        var running = setTimeout(animate,30);
     }
     setTimeout(animate,21000);
     sleep(29000)
@@ -699,14 +699,6 @@ function LaunchRocket()
                     starBklink.style.display = 'none';
                     starBklink.style.transition = 'all 2s';
                 })
-                setTimeout(() => {
-                    dream.style.display = 'none';
-                    document.querySelector('#drag-container').style.zIndex = 999;
-                    document.querySelector('#drag-container').style.display = 'block';
-                    document.querySelector('#spin-container').style.top = '30%';
-                    document.querySelector('#spin-container').style.display = 'block';
-                    carousel();
-                }, 20000);
                 var string = 'Có thể xem nếu thích nhé❤️->';
                 var btsNote = document.querySelector('.bts-note');
                 var str = string.split('');
@@ -715,42 +707,19 @@ function LaunchRocket()
                     str.length > 0 ? btsNote.innerHTML += str.shift() : clearTimeout(running);
                     var running = setTimeout(animate,80);
                 }
-                setTimeout(animate,20000);
+                setTimeout(function(){
+                    animate();
+                    document.querySelector('.bts').style.display = 'block';
+                },20000)
                 document.querySelector('.bts').onclick = function()
-                {
-                    document.querySelector('#spin-container .video-1').pause();
-                    document.querySelector('#spin-container .video-2').pause();
-                    document.querySelector('#spin-container .video-3').pause();
-                    document.querySelector('#spin-container .video-4').pause();
-                    document.querySelector('#spin-container .video-5').pause();
-                    document.querySelector('#spin-container .video-6').pause();
+                {         
+                    dream.style.display = 'none';
                     document.querySelector('.behind-the-scenes').style.display = 'block';
-                    document.querySelector('.behind-the-scenes').style.transition = 'all 2s ease-in';
-                    document.querySelector('#drag-container').style.display = 'none';
-                    document.querySelector('#spin-container').style.display = 'none';
+                    document.querySelector('.contain').style.display = 'none';
                     bts();
                 }
-    }   
-    //         getData()
-    //             .then((data) => {
-    //                 console.log(data.data);
-    //             })
-    //         var api = 'http://localhost:3000/comment';
-    // async function getData() 
-    // {
-    //     var input = document.querySelector('.dream-msg').value;
-    //     try {
-    //         let data = axios.put(api+'/'+1,{
-    //             desc: input
-    //         })
-    //         return data;
-    //     }
-    //     catch(e){
-    //         console.log(e)
-    //     }
-    // }
+    }     
 }
-// LaunchRocket();
 function bts()
 {
     var string = 'Behind The Scenes';
@@ -782,108 +751,6 @@ function sleep(ms)
     return new Promise(function(resolve){
         setTimeout(resolve, ms);
     })
-}
-function carousel()
-{
-var radius = 240; // how big of the radius
-var autoRotate = true; // auto rotate or not
-var rotateSpeed = -60; // unit: seconds/360 degrees
-var imgWidth = 263; // width of images (unit: px)
-var imgHeight = 244; // height of images (unit: px)
-setTimeout(init, 1000);
-
-var odrag = document.getElementById('drag-container');
-var ospin = document.getElementById('spin-container');
-var aImg = ospin.getElementsByTagName('img');
-var aVid = ospin.getElementsByTagName('video');
-var aEle = [...aImg, ...aVid]; // combine 2 arrays
-
-// Size of images
-ospin.style.width = imgWidth + "px";
-ospin.style.height = imgHeight + "px";
-
-// Size of ground - depend on radius
-var ground = document.getElementById('ground');
-ground.style.width = radius * 3 + "px";
-ground.style.height = radius * 3 + "px";
-
-function init(delayTime) {
-  for (var i = 0; i < aEle.length; i++) {
-    aEle[i].style.transform = "rotateY(" + (i * (360 / aEle.length)) + "deg) translateZ(" + radius + "px)";
-    aEle[i].style.transition = "transform 1s";
-    aEle[i].style.transitionDelay = delayTime || (aEle.length - i) / 4 + "s";
-  }
-}
-
-function applyTranform(obj) {
-  // Constrain the angle of camera (between 0 and 180)
-  if(tY > 180) tY = 180;
-  if(tY < 0) tY = 0;
-
-  // Apply the angle
-  obj.style.transform = "rotateX(" + (-tY) + "deg) rotateY(" + (tX) + "deg)";
-}
-
-function playSpin(yes) {
-  ospin.style.animationPlayState = (yes?'running':'paused');
-}
-
-var sX, sY, nX, nY, desX = 0,
-    desY = 0,
-    tX = 0,
-    tY = 10;
-
-// auto spin
-if (autoRotate) {
-  var animationName = (rotateSpeed > 0 ? 'spin' : 'spinRevert');
-  ospin.style.animation = `${animationName} ${Math.abs(rotateSpeed)}s infinite linear`;
-}
-// setup events
-document.onpointerdown = function (e) {
-  clearInterval(odrag.timer);
-  e = e || window.event;
-  var sX = e.clientX,
-      sY = e.clientY;
-
-  this.onpointermove = function (e) {
-    e = e || window.event;
-    var nX = e.clientX,
-        nY = e.clientY;
-    desX = nX - sX;
-    desY = nY - sY;
-    tX += desX * 0.1;
-    tY += desY * 0.1;
-    applyTranform(odrag);
-    sX = nX;
-    sY = nY;
-  };
-
-  this.onpointerup = function (e) {
-    odrag.timer = setInterval(function () {
-      desX *= 0.95;
-      desY *= 0.95;
-      tX += desX * 0.1;
-      tY += desY * 0.1;
-      applyTranform(odrag);
-      playSpin(false);
-      if (Math.abs(desX) < 0.5 && Math.abs(desY) < 0.5) {
-        clearInterval(odrag.timer);
-        playSpin(true);
-      }
-    }, 17);
-    this.onpointermove = this.onpointerup = null;
-  };
-
-  return false;
-};
-
-document.onmousewheel = function(e) {
-  e = e || window.event;
-  var d = e.wheelDelta / 20 || -e.detail;
-  radius += d;
-  init(1);
-};
-
 }
 sendBtn();
 star()

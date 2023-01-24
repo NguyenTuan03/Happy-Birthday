@@ -654,10 +654,11 @@ and (-webkit-device-pixel-ratio: 2){
     .birthday-text {
         position: absolute;
         width: 173px;
-        font-size: 25px;
+        font-size: 21px;
         height: 271px;
-        top: 324px;
+        top: 292px;
         left: 25px;
+        color: #582208;
         animation: Updown 1s ease-in;
     }
     .birthday-icon {
@@ -1087,6 +1088,7 @@ and (-webkit-device-pixel-ratio: 2){
     .balloon:nth-child(5):before { 
         color:hsl(23,44%,46%);  
     }
+    /* Dream */
     .Dream {
         width: 100%;
         height: 100%;
@@ -1436,6 +1438,7 @@ and (-webkit-device-pixel-ratio: 2){
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         background: #e7ee47a1;
         border-radius: 10px;
+        display: none;
     }
     .behind-the-scenes {
         height: 100%;
