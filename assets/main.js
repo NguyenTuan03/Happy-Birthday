@@ -234,11 +234,7 @@ function birthdayCard()
     var timeLine = new TimelineMax({
         paused: false
     });
-    timeLine
-        // .to(birthdayImg1,0.5,{
-        //     opacity:0,
-        //     width:0,
-        // })
+    timeLine        
         .to(birthdayImgPic1,0.7,{
             opacity:0,
             width:0,
@@ -422,7 +418,7 @@ function birthdayCard()
                 document.querySelector('.birthday-heart').style.display = 'block';
             })
     var birthdayText = document.querySelector('.birthday-text');
-    var string = 'Dear darling, chúc bé có tuổi 20 thật đẹp đẽ và có nhiều niềm vui trong cuộc sống, và đặc biệt là gặt hái được nhiều thành công. Cho tau cơ hội để tìm hiểu mei nhiều hơn nhé !. Thay mặt Đảng, Chính phủ, các vị bộ trưởng và toàn thể nhân dân Việt Nam cùng hơn 7 tỷ nhân dân trên thế giới, chúc mừng sinh nhật ạ !! ♥️';
+    var string = 'Dear darling, chúc bé có tuổi 20 thật đẹp đẽ và có nhiều niềm vui trong cuộc sống, và đặc biệt là gặt hái được nhiều thành công. Cho tau cơ hội để tìm hiểu mei nhiều hơn nhé !. Thay mặt Đảng, Chính phủ, các vị bộ trưởng và toàn thể nhân dân Việt Nam cùng hơn 8 tỷ nhân dân trên thế giới, chúc mừng sinh nhật ạ !! ♥️';
     var str = string.split('');
     function animate()
     {
@@ -445,6 +441,30 @@ function birthdayCard()
     BirthdayBtn.onclick = function()
     {
         cake();
+    }
+}
+function picture()
+{
+    document.querySelector('.pictures').style.display = 'grid';
+    document.querySelector('.pictures audio').play();
+    var string = 'Có thể xem nếu thích nhé❤️->';
+    var btsNote = document.querySelector('.bts-note');
+    var str = string.split('');
+    function animate()
+    {
+        str.length > 0 ? btsNote.innerHTML += str.shift() : clearTimeout(running);
+        var running = setTimeout(animate,80);
+    }
+    setTimeout(function(){
+        animate();
+        document.querySelector('.bts').style.display = 'block';
+    },20000)
+    document.querySelector('.bts').onclick = function()
+    {         
+        document.querySelector('.pictures audio').pause();
+        document.querySelector('.behind-the-scenes').style.display = 'block';
+        document.querySelector('.contain').style.display = 'none';
+        bts();
     }
 }
 function cake()
@@ -604,6 +624,7 @@ function cake()
 
                 })
         }
+        
 }
 function LaunchRocket()
 {
@@ -698,26 +719,12 @@ function LaunchRocket()
                 .then(function(){
                     starBklink.style.display = 'none';
                     starBklink.style.transition = 'all 2s';
+                    return sleep(5000)
                 })
-                var string = 'Có thể xem nếu thích nhé❤️->';
-                var btsNote = document.querySelector('.bts-note');
-                var str = string.split('');
-                function animate()
-                {
-                    str.length > 0 ? btsNote.innerHTML += str.shift() : clearTimeout(running);
-                    var running = setTimeout(animate,80);
-                }
-                setTimeout(function(){
-                    animate();
-                    document.querySelector('.bts').style.display = 'block';
-                },20000)
-                document.querySelector('.bts').onclick = function()
-                {         
+                .then(function(){
                     dream.style.display = 'none';
-                    document.querySelector('.behind-the-scenes').style.display = 'block';
-                    document.querySelector('.contain').style.display = 'none';
-                    bts();
-                }
+                    picture();
+                })
     }     
 }
 function bts()
