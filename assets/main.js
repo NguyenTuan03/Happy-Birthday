@@ -685,7 +685,7 @@ function LaunchRocket()
                     return sleep(14500)
                 })
                 .then(function(){
-                    document.querySelector(".dream-audio").play();
+                    document.querySelector("#dream-audio").play();
                     return sleep(500);
                 })
                 .then(function(){
@@ -703,7 +703,7 @@ function LaunchRocket()
                     document.querySelector('#spin-container').style.display = 'block';
                     document.querySelector('#spin-container').style.top = '40%';
                     carosel();  
-                    document.querySelector('.overdose').play();
+                    audioOverdose.play();
                     return sleep(10000)
                 })
                 .then(function(){
@@ -718,10 +718,11 @@ function LaunchRocket()
                     animate();
                     document.querySelector('.bts').style.display = 'block';
                 })
-    }     
+    }   
+    var audioOverdose = document.querySelector('#overdose');  
     document.querySelector('.bts').onclick = function()
     {         
-        document.querySelector('.overdose').pause();
+        audioOverdose.pause();
         document.querySelector('.behind-the-scenes').style.display = 'block';
         document.querySelector('.contain').style.display = 'none';
         bts();
