@@ -691,14 +691,15 @@ function LaunchRocket()
                 })
                 .then(function(){
                     starBklink.style.display = 'block';
-                    return sleep(2000)
+                    return sleep(2000);
                 })
                 .then(function(){
                     starBklink.style.display = 'none';
                     starBklink.style.transition = 'all 2s';
-                    return sleep(5000)
+                    return sleep(5000);
                 })
                 .then(function(){
+                    audioOverdose.play();
                     dream.style.display = 'none';
                     document.querySelector('#drag-container').style.display = 'block';
                     document.querySelector('#spin-container').style.display = 'block';
@@ -1091,7 +1092,6 @@ function draw(){
 }
 
 draw();
-audioOverdose.play();
 }
 function bts()
 {
