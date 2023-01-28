@@ -738,7 +738,6 @@ var imgWidth = 120; // width of images (unit: px)
 var imgHeight = 170; // height of images (unit: px)
 
 // Link of background music - set 'null' if you dont want to play background music
-var bgMusicControls = true; // Show UI music control
 // ===================== start =======================
 // animation start after 1000 miliseconds
 setTimeout(init, 1000);
@@ -1090,7 +1089,6 @@ function draw(){
 
   requestAnimationFrame(draw);
 }
-
 draw();
 }
 function bts()
