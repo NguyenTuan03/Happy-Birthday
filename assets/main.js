@@ -15,6 +15,7 @@ var blursArray = ['0px','2px'];// Lấy dộ mờ
 var colorsArray = ['#FBFACD','orange','#00E7FF'];
 var width = document.documentElement.clientWidth;
 var height = document.documentElement.clientHeight;
+var audioOverdose = document.querySelector('#overdose');  
 var count1 = 150;
 function star()
 {
@@ -703,7 +704,6 @@ function LaunchRocket()
                     document.querySelector('#spin-container').style.display = 'block';
                     document.querySelector('#spin-container').style.top = '40%';
                     carosel();  
-                    audioOverdose.play();
                     return sleep(10000)
                 })
                 .then(function(){
@@ -719,7 +719,6 @@ function LaunchRocket()
                     document.querySelector('.bts').style.display = 'block';
                 })
     }   
-    var audioOverdose = document.querySelector('#overdose');  
     document.querySelector('.bts').onclick = function()
     {         
         audioOverdose.pause();
@@ -1092,6 +1091,7 @@ function draw(){
 }
 
 draw();
+audioOverdose.play();
 }
 function bts()
 {
