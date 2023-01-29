@@ -697,58 +697,37 @@ function LaunchRocket()
                 .then(function(){
                     starBklink.style.display = 'none';
                     starBklink.style.transition = 'all 2s';
+                    dreamBtn.style.display = 'block';
                 })
-                // .then(function(){
-                //     audioOverdose.play();
-                //     dream.style.display = 'none';
-                //     document.querySelector('#drag-container').style.display = 'block';
-                //     document.querySelector('#spin-container').style.display = 'block';
-                //     document.querySelector('#spin-container').style.top = '40%';
-                //     carosel();  
-                //     return sleep(10000)
-                // })
-                // .then(function(){
-                //     var string = 'Có thể xem nếu thích nhé❤️->';
-                //     var btsNote = document.querySelector('.bts-note');
-                //     var str = string.split('');
-                //     function animate()
-                //     {
-                //         str.length > 0 ? btsNote.innerHTML += str.shift() : clearTimeout(running);
-                //         var running = setTimeout(animate,80);
-                //     }
-                //     animate();
-                //     document.querySelector('.bts').style.display = 'block';
-                // })
-    }   
-        dreamBtn.addEventListener("click", () => {
-            audioOverdose.play();
-            dream.style.display = 'none';
-            document.querySelector('#drag-container').style.display = 'block';
-            document.querySelector('#spin-container').style.display = 'block';
-            document.querySelector('#spin-container').style.top = '40%';
-            carosel();  
-            sleep(10000)
-                .then(function(){
-                    var string = 'Có thể xem nếu thích nhé❤️->';
-                    var btsNote = document.querySelector('.bts-note');
-                    var str = string.split('');
-                    function animate()
-                    {
-                        str.length > 0 ? btsNote.innerHTML += str.shift() : clearTimeout(running);
-                        var running = setTimeout(animate,80);
-                    }
-                    animate();
-                    document.querySelector('.bts').style.display = 'block';                })
-        })
-
-
-    document.querySelector('.bts').onclick = function()
-    {         
-        audioOverdose.pause();
-        document.querySelector('.behind-the-scenes').style.display = 'block';
-        document.querySelector('.contain').style.display = 'none';
-        bts();
-    }
+            }   
+            dreamBtn.addEventListener("click", () => {
+                audioBirthday.pause();
+                audioOverdose.play();
+                dream.style.display = 'none';
+                document.querySelector('#drag-container').style.display = 'block';
+                document.querySelector('#spin-container').style.display = 'block';
+                document.querySelector('#spin-container').style.top = '40%';
+                carosel();  
+                sleep(10000)
+                    .then(function(){
+                        var string = 'Có thể xem nếu thích nhé❤️->';
+                        var btsNote = document.querySelector('.bts-note');
+                        var str = string.split('');
+                        function animate()
+                        {
+                            str.length > 0 ? btsNote.innerHTML += str.shift() : clearTimeout(running);
+                            var running = setTimeout(animate,80);
+                        }
+                        animate();
+                        document.querySelector('.bts').style.display = 'block';                })
+            })
+            document.querySelector('.bts').onclick = function()
+            {         
+                audioOverdose.pause();
+                document.querySelector('.behind-the-scenes').style.display = 'block';
+                document.querySelector('.contain').style.display = 'none';
+                bts();
+            }
 }
 function carosel()
 {

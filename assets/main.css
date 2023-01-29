@@ -1461,9 +1461,20 @@ and (-webkit-device-pixel-ratio: 2){
         display: none;
     }
     .dream-btn {
+        text-transform: unset;
         position: absolute;
-        top: 30%;
-        left: 50px;
+        bottom: 16%;
+        right: 75px;
+        padding: 10px;
+        border-radius: 8px;
+        border: none;
+        background: #d6871d;
+        color: #2d1258;
+        font-weight: bold;
+        letter-spacing: 0.8px;
+        transition: all 0.5s ease-in;
+        font-size: 15px;
+        display: none;
     }
       #drag-container, #spin-container {
         transform-style: preserve-3d;
