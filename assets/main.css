@@ -883,11 +883,10 @@ and (-webkit-device-pixel-ratio: 2){
       overflow: hidden;
   }
   
-  p {
+ #spin-container p {
       font-family: 'Dancing Script', cursive;
       font-family: 'Rampart One', cursive;
       font-size: 4vw;
-      
   }
     /* cake */
     @import url(https://fonts.googleapis.com/css?family=Lato:300italic);
