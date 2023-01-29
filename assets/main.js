@@ -607,6 +607,7 @@ function LaunchRocket()
 {
     document.querySelector('body').style.backgroundColor = '#000'
     var dreamArrow = document.querySelector('.dream-arrow');
+    var dreamBtn = document.querySelector('.dream-btn');
     var Arrow = document.querySelector('.arrow');
     var dreamMsg = document.querySelector('.dream-contain--msg');
     var moonBtn = document.querySelector('.moon-btn');
@@ -626,7 +627,6 @@ function LaunchRocket()
     });
     moonBtn.onclick = function()
     {
-        audioBirthday.pause(); 
         setTimeout(() => {
             dreamMsg.style.right = '168px'
             dreamMsg.style.bottom = '260px'
@@ -686,6 +686,7 @@ function LaunchRocket()
                     return sleep(14500)
                 })
                 .then(function(){
+                    audioBirthday.pause(); 
                     document.querySelector("#dream-audio").play();
                     return sleep(500);
                 })
@@ -696,17 +697,37 @@ function LaunchRocket()
                 .then(function(){
                     starBklink.style.display = 'none';
                     starBklink.style.transition = 'all 2s';
-                    return sleep(5000);
                 })
-                .then(function(){
-                    audioOverdose.play();
-                    dream.style.display = 'none';
-                    document.querySelector('#drag-container').style.display = 'block';
-                    document.querySelector('#spin-container').style.display = 'block';
-                    document.querySelector('#spin-container').style.top = '40%';
-                    carosel();  
-                    return sleep(10000)
-                })
+                // .then(function(){
+                //     audioOverdose.play();
+                //     dream.style.display = 'none';
+                //     document.querySelector('#drag-container').style.display = 'block';
+                //     document.querySelector('#spin-container').style.display = 'block';
+                //     document.querySelector('#spin-container').style.top = '40%';
+                //     carosel();  
+                //     return sleep(10000)
+                // })
+                // .then(function(){
+                //     var string = 'Có thể xem nếu thích nhé❤️->';
+                //     var btsNote = document.querySelector('.bts-note');
+                //     var str = string.split('');
+                //     function animate()
+                //     {
+                //         str.length > 0 ? btsNote.innerHTML += str.shift() : clearTimeout(running);
+                //         var running = setTimeout(animate,80);
+                //     }
+                //     animate();
+                //     document.querySelector('.bts').style.display = 'block';
+                // })
+    }   
+        dreamBtn.addEventListener("click", () => {
+            audioOverdose.play();
+            dream.style.display = 'none';
+            document.querySelector('#drag-container').style.display = 'block';
+            document.querySelector('#spin-container').style.display = 'block';
+            document.querySelector('#spin-container').style.top = '40%';
+            carosel();  
+            sleep(10000)
                 .then(function(){
                     var string = 'Có thể xem nếu thích nhé❤️->';
                     var btsNote = document.querySelector('.bts-note');
@@ -717,9 +738,10 @@ function LaunchRocket()
                         var running = setTimeout(animate,80);
                     }
                     animate();
-                    document.querySelector('.bts').style.display = 'block';
-                })
-    }   
+                    document.querySelector('.bts').style.display = 'block';                })
+        })
+
+
     document.querySelector('.bts').onclick = function()
     {         
         audioOverdose.pause();

@@ -1460,6 +1460,11 @@ and (-webkit-device-pixel-ratio: 2){
         animation: opacity 2s ease-in;
         display: none;
     }
+    .dream-btn {
+        position: absolute;
+        top: 30%;
+        left: 50px;
+    }
       #drag-container, #spin-container {
         transform-style: preserve-3d;
         height: 100%;
@@ -1571,7 +1576,7 @@ and (-webkit-device-pixel-ratio: 2){
         height: 20px;
         line-height: 20px;
         text-align: center;
-        font-family: cursive;
+        font-family: sans-serif;
         color: aquamarine;
     }
     .bts {
@@ -1642,7 +1647,7 @@ and (-webkit-device-pixel-ratio: 2){
         transform: translateX(-50%);
         width: 73%;
         font-size: 24px;
-        font-family: cursive;
+        font-family: sans-serif;
         color: #18143c;
         background: #f5a200;
     }
