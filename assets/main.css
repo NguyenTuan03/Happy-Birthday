@@ -1581,7 +1581,7 @@ and (-webkit-device-pixel-ratio: 2){
     /* BTS */
     .bts-note {
         position: absolute;
-        top: 78%;
+        top: 80%;
         left: 50px;
         font-size: 19px;
         height: 20px;

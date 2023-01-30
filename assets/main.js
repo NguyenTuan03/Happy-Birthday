@@ -419,7 +419,7 @@ function birthdayCard()
                 document.querySelector('.birthday-heart').style.display = 'block';
             })
     var birthdayText = document.querySelector('.birthday-text');
-    var string = 'Dear darling, chúc bé có tuổi 20 thật đẹp đẽ và có nhiều niềm vui trong cuộc sống, và đặc biệt là gặt hái được nhiều thành công. Cho tau cơ hội để tìm hiểu mei nhiều hơn nhé !. Thay mặt Đảng, Chính phủ, các vị bộ trưởng và toàn thể nhân dân Việt Nam cùng hơn 8 tỷ nhân dân trên thế giới, chúc mừng sinh nhật ạ !! ♥️';
+    var string = 'Dear darling, chúc mei có tuổi 20 thật đẹp đẽ và có nhiều niềm vui trong cuộc sống, và đặc biệt là gặt hái được nhiều thành công. Thay mặt Đảng, Chính phủ, các vị bộ trưởng và toàn thể nhân dân Việt Nam cùng hơn 8 tỷ nhân dân trên thế giới, chúc mừng sinh nhật ạ !! ♥️';
     var str = string.split('');
     function animate()
     {
