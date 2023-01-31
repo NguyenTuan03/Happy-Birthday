@@ -1474,6 +1474,7 @@ and (-webkit-device-pixel-ratio: 2){
         letter-spacing: 0.8px;
         transition: all 0.5s ease-in;
         font-size: 15px;
+        box-shadow: 0px 2px 14px #fff;
         display: none;
     }
       #drag-container, #spin-container {
@@ -1582,7 +1583,7 @@ and (-webkit-device-pixel-ratio: 2){
     .bts-note {
         position: absolute;
         top: 80%;
-        left: 50px;
+        left: 10px;
         font-size: 19px;
         height: 20px;
         line-height: 20px;
@@ -1596,8 +1597,9 @@ and (-webkit-device-pixel-ratio: 2){
         text-align: center;
         height: 50px;
         line-height: 50px;
-        top: 76.6%;
-        right: 50px;
+        top: 77.6%;
+        box-shadow: 0px 3px 21px #fff;
+        right: 30px;
         font-size: 22px;
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         background: #e7ee47a1;
