@@ -614,7 +614,7 @@ function LaunchRocket()
     var dreamText = document.querySelector('.dream-text');
     var rocket = document.querySelector('.rocket');
     var starBklink = document.querySelector('.star-blink');
-    var string = 'Gửi điều ước vào đây và phóng chúng vào vì sao nào';
+    var string = 'Gửi điều ước vào đây và ấn nút phóng nhé';
     var str = string.split('');
     function animate()
     {
@@ -698,6 +698,7 @@ function LaunchRocket()
                     starBklink.style.display = 'none';
                     starBklink.style.transition = 'all 2s';
                     dreamBtn.style.display = 'block';
+                    document.querySelector('.dream-next--btn').style.display = 'block';
                 })
             }   
             dreamBtn.addEventListener("click", () => {
@@ -708,9 +709,9 @@ function LaunchRocket()
                 document.querySelector('#spin-container').style.display = 'block';
                 document.querySelector('#spin-container').style.top = '40%';
                 carosel();  
-                sleep(10000)
+                sleep(20000)
                     .then(function(){
-                        var string = 'Có thể xem nếu thích nhé❤️->';
+                        var string = 'Có thể xem nếu thích nhé ->';
                         var btsNote = document.querySelector('.bts-note');
                         var str = string.split('');
                         function animate()

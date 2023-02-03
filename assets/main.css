@@ -726,20 +726,35 @@ and (-webkit-device-pixel-ratio: 2){
         width: 153px;
         height: 83px;
         text-align: center;
-        bottom: 66px;
+        bottom: 72px;
         right: 21px;
         position: absolute;
         right: top;
-        font-size: 24px;
-        background: #c7c79bab;
-        box-shadow: 10px 4px 16px #e7d76d57;
+        font-size: 20px;
+        background: #2c818299;
+        box-shadow: 13px 12px 14px #0e0d028a;
         color: chocolate;
-        font-family: cursive;
-        border-radius: 50% 50% 0% 100% / 50% 100% 0% 50%;
+        font-family: sans-serif;
+        border-radius: 50% 50% 0% 100% / 100% 0% 100% 0%;
         transform: rotate(-15deg);
         text-shadow: 1px 0px 1px #efe4cb;
+        line-height: 24px;
+        text-align: left;
+        padding-top: 10px;
+        padding-left: 22px;
         opacity: 0;
     } 
+    .birthday-wish--btn::after {
+        content: "";
+        position: absolute;
+        right: 15px;
+        bottom: 15px;
+        width: 30px;
+        height: 30px;
+        background-color: rebeccapurple;
+        border-radius: 50%;
+        box-shadow: 0px 2px 26px #eb911d;
+    }
     /* Carosel */
     /* body {
       overflow: hidden;
@@ -1448,6 +1463,18 @@ and (-webkit-device-pixel-ratio: 2){
         bottom: 182px;
         animation: opacity 2s ease-in;
     }
+    .dream-next--btn {
+        background-image: url(../Music/output-onlinegiftools\ \(1\).gif);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 36px;
+        height: 50px;
+        position: absolute;
+        right: 26%;
+        bottom: 59px;
+        animation: opacity 2s ease-in;
+        display: none;
+    }
     .star-blink {
         background-image: url(../Music/starblink.gif);
         background-repeat: no-repeat;
@@ -1624,7 +1651,7 @@ and (-webkit-device-pixel-ratio: 2){
     }
     .bts-text {
         position: absolute;
-        top: 10%;
+        top: 14%;
         letter-spacing: 5px;
         left: 50%;
         transform: translateX(-50%);
