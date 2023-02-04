@@ -41,7 +41,7 @@ function star()
 }   
 function formvalidate()
 {
-    var number = 22022003;
+    var number = 2202;
     var formImg = document.querySelector('.form-img');
     var formInput= document.querySelector('.form-content');
     var formbtn = document.querySelector('.form-btn');
