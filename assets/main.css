@@ -99,15 +99,7 @@ and (-webkit-device-pixel-ratio: 2){
     }
     .content .frame-9 {
         animation-delay: 24s;
-        font-size: 38px;
-    }
-    .content .frame-10 {
-        animation-delay: 27s;
-        font-size: 30px;
-    }
-    .content .frame-11 {
-        animation-delay: 30s;
-        font-size: 40px;
+        font-size: 44px;
     }
     .form {
         position: absolute;
@@ -118,6 +110,27 @@ and (-webkit-device-pixel-ratio: 2){
         left: 50%;
         text-align: center;
         display: none;
+    }
+    .form-instruc {
+        position: absolute;
+        top: 46px;
+        font-size: 14px;
+        width: 100px;
+        right: 52px;
+        z-index: 1;
+        color: #8c66db;
+
+    }
+    .form-instruc::before {
+        content: '';
+        background-image: url(../Music/arrow-form.png);
+        background-repeat: no-repeat;
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background-size: contain;
+        transform: rotate(132deg) scale(1.5);
+        left: -35px;
     }
     .form-arrow {
         background-image: url(../Music/arrow-form.png);
@@ -737,7 +750,6 @@ and (-webkit-device-pixel-ratio: 2){
         font-family: sans-serif;
         border-radius: 50% 50% 0% 100% / 100% 0% 100% 0%;
         transform: rotate(-15deg);
-        text-shadow: 1px 0px 1px #efe4cb;
         line-height: 24px;
         text-align: left;
         padding-top: 10px;
@@ -1001,6 +1013,19 @@ and (-webkit-device-pixel-ratio: 2){
         box-shadow: 2px 4px 11px #f7a76c;
         border-radius: 8px;
         opacity: 0;
+    }
+    .text--btn::after {
+        content: '';
+        background-image: url(../Music/arrow-form.png);
+        position: absolute;
+        top: 114%;
+        left: -34px;
+        width: 40px;
+        height: 40px;
+        z-index: 9999;
+        transform: scale(1.5);
+        background-repeat: no-repeat;
+        background-size: contain;    
     }
     /* ============================================== Animation Fire
     */

@@ -541,7 +541,7 @@ function cake()
                 })
             })
         WishBtn.onclick = function()
-        {
+        {            
             document.querySelector('.text-para').style.display = 'none'
             var timeLine = new TimelineMax({
                 paused: false
@@ -1115,7 +1115,7 @@ function sendBtn()
         audio.play();
         btn.style.display = 'none';
         btn.style.animation = 'Fade 0.5s ease-in forwards'
-        sleep(35000)
+        sleep(28000)
             .then(formvalidate)
     });    
 }
