@@ -1110,7 +1110,7 @@ function sendBtn()
 {
     //Hàm to(phần tử được chọn,thời gian di chuyển,
     //{hiệu ứng},”khoảng cách 2 chuyển động”)
-    btn.addEventListener("click", () => {
+    btn.addEventListener("touchstart", () => {
         content.style.display = 'block';
         audio.play();
         btn.style.display = 'none';
