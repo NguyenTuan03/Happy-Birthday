@@ -199,6 +199,9 @@ and (-webkit-device-pixel-ratio: 2){
         left: 50%;
         text-align: center;
     }
+    .form-content:focus {
+        font-size: 16px;
+    }
     .form-content:placeholder-shown {
         font-weight: 700;
         font-size: 18px;
@@ -285,6 +288,19 @@ and (-webkit-device-pixel-ratio: 2){
         font-size: 30px;
         animation: fadeInOut 2s ease-in both;
         animation-delay: 5s;
+    }
+    .img-content3 {
+        position: absolute;
+        top: 60%;
+        color: #FFE4BF;
+        width: 100%;
+        left: 0;
+        right: 0;
+        text-align: center;
+        letter-spacing: 1.3px;
+        font-size: 30px;
+        animation: fadeInOut 2s ease-in both;
+        animation-delay: 7s;
     }
     /* Birthday */
     .birthday {

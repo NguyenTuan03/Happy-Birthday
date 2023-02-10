@@ -134,7 +134,7 @@ function formvalidate()
                 ImgWrong.style.display = 'block';
                 ImgWrong.style.animation = 'opacity 1s ease-in';
                 audioAnserwrong.play();
-                    sleep(7000)
+                    sleep(10000)
                         .then(function(){
                             form.style.display = 'block';
                         timeLine
@@ -163,8 +163,8 @@ function formvalidate()
                                 height:30,
                                 opacity:1,
                             })        
-                        ImgWrong.style.display = 'none';
-                        audio.play();
+                            ImgWrong.style.display = 'none';
+                            audio.play();
                         })
             }
             else {  
