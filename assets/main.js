@@ -126,8 +126,11 @@ function formvalidate()
             opacity:1,
             height:150
         })   
-        formbtn.bind("keypress", function(e){
-            if (e.which === 13) {
+        if (document.querySelector('.form'))
+        {
+            document.querySelector('.form').onsubmit = function(e)
+            {
+                e.preventDefault();
                 audio.pause();
                 if (formInput.value != number) {
                     console.log('sai r');
@@ -181,8 +184,8 @@ function formvalidate()
                     },38000));
                     birthdayCard();
                 }           
-            } 
-         }); 
+            }
+        }   
 }
 function birthdayCard()
 {
