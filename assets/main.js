@@ -184,6 +184,7 @@ function formvalidate()
                     },38000));
                     birthdayCard();
                 }           
+                document.querySelector(this).blur();    
             }
         }   
 }
