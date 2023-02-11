@@ -126,61 +126,64 @@ function formvalidate()
             opacity:1,
             height:150
         })    
-        formbtn.onclick = function()
+        formbtn.onkeyup = function(e)
         {
-            audio.pause();
-            if (formInput.value != number) {
-                console.log('sai r');
-                ImgWrong.style.display = 'block';
-                ImgWrong.style.animation = 'opacity 1s ease-in';
-                audioAnserwrong.play();
-                    sleep(10000)
-                        .then(function(){
-                            form.style.display = 'block';
-                        timeLine
-                            .to(formImg,0, {
-                                opacity: 0            
-                            })
-                            .to(formbtn,0,{
-                                opacity:0,
-                            })
-                            .to(formImg,0.6,{
-                                height:40,
-                                y:-20,
-                                opacity:0.8,
-                            })
-                            .to(formImg,0.2,{
-                                height:290,
-                                opacity:1            
-                            })
-                            .to(formbtn,0.5,{
-                                height:30,
-                                opacity:0.5,
-                                y:-20,
-                                delay: 0.5
-                            })
-                            .to(formbtn,0.3,{
-                                height:30,
-                                opacity:1,
-                            })        
-                            ImgWrong.style.display = 'none';
-                            audio.play();
-                        })
-            }
-            else {  
+            if (e.keycode = '27')
+            {
                 audio.pause();
-                audioBirthday.play()
-                birthday.style.display = 'block';
-                birthday.style.animation = 'opacity 1s ease-in';
-                clearTimeout(setTimeout(() => {
-                    audio.play();
-                    content.style.display = 'block';
-                }, 2500));
-                clearTimeout(setTimeout(() => {
-                    formvalidate();
-                },38000));
-                birthdayCard();
-            }   
+                if (formInput.value != number) {
+                    console.log('sai r');
+                    ImgWrong.style.display = 'block';
+                    ImgWrong.style.animation = 'opacity 1s ease-in';
+                    audioAnserwrong.play();
+                        sleep(10000)
+                            .then(function(){
+                                form.style.display = 'block';
+                            timeLine
+                                .to(formImg,0, {
+                                    opacity: 0            
+                                })
+                                .to(formbtn,0,{
+                                    opacity:0,
+                                })
+                                .to(formImg,0.6,{
+                                    height:40,
+                                    y:-20,
+                                    opacity:0.8,
+                                })
+                                .to(formImg,0.2,{
+                                    height:290,
+                                    opacity:1            
+                                })
+                                .to(formbtn,0.5,{
+                                    height:30,
+                                    opacity:0.5,
+                                    y:-20,
+                                    delay: 0.5
+                                })
+                                .to(formbtn,0.3,{
+                                    height:30,
+                                    opacity:1,
+                                })        
+                                ImgWrong.style.display = 'none';
+                                audio.play();
+                            })
+                }
+                else {  
+                    audio.pause();
+                    audioBirthday.play()
+                    birthday.style.display = 'block';
+                    birthday.style.animation = 'opacity 1s ease-in';
+                    clearTimeout(setTimeout(() => {
+                        audio.play();
+                        content.style.display = 'block';
+                    }, 2500));
+                    clearTimeout(setTimeout(() => {
+                        formvalidate();
+                    },38000));
+                    birthdayCard();
+                }   
+            }
         }            
 }
 function birthdayCard()
