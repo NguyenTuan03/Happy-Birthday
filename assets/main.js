@@ -618,7 +618,7 @@ function LaunchRocket()
     var dreamText = document.querySelector('.dream-text');
     var rocket = document.querySelector('.rocket');
     var starBklink = document.querySelector('.star-blink');
-    var string = 'Gửi điều ước vào đây và ấn nút phóng nhé';
+    var string = 'Gửi điều ước vào đây và ấn nút  "Phóng"  nhé';
     var str = string.split('');
     function animate()
     {

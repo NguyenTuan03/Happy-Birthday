@@ -1699,7 +1699,7 @@ and (-webkit-device-pixel-ratio: 2){
     }
     .bts-text {
         position: absolute;
-        top: 14%;
+        top: 12%;
         letter-spacing: 5px;
         left: 50%;
         transform: translateX(-50%);
@@ -1728,7 +1728,7 @@ and (-webkit-device-pixel-ratio: 2){
     }
     .thanks {
         position: absolute;
-        bottom: 20%;
+        bottom: 18%;
         letter-spacing: 5px;
         left: 50%;
         align-items: center;
