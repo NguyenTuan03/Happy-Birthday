@@ -630,6 +630,10 @@ function LaunchRocket()
     var timeLine = new TimelineMax({
         paused: false
     });
+    document.querySelector('.dream-msg').onfocus = function () {
+        window.scrollTo(0, 0);
+        document.body.scrollTop = 0;
+    }
     moonBtn.onclick = function()
     {
         setTimeout(() => {
