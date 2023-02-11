@@ -128,7 +128,7 @@ function formvalidate()
         })    
         formbtn.onkeyup = function(e)
         {
-            if (e.which === 13)
+            if (e.keycode === 13)
             {
                 audio.pause();
                 if (formInput.value != number) {
@@ -183,6 +183,7 @@ function formvalidate()
                     },38000));
                     birthdayCard();
                 }   
+                document.querySelector(this).blur();
             }
         }            
 }
