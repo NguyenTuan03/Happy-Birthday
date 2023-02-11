@@ -630,8 +630,7 @@ function LaunchRocket()
         paused: false
     });
     document.querySelector('.dream-msg').onfocus = function () {
-        window.scrollTo(0, 0);
-        document.body.scrollTop = 0;
+        document.body.style.height = window.innerHeight+'px';
     }
     moonBtn.onclick = function()
     {
