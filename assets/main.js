@@ -128,7 +128,7 @@ function formvalidate()
         })    
         formbtn.onkeyup = function(e)
         {
-            if (e.keycode = '27')
+            if (e.which === 13)
             {
                 audio.pause();
                 if (formInput.value != number) {
