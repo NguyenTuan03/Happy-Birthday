@@ -423,7 +423,7 @@ function birthdayCard()
                 document.querySelector('.birthday-heart').style.display = 'block';
             })
     var birthdayText = document.querySelector('.birthday-text');
-    var string = 'Dear darling, chúc mei có tuổi 20 thật đẹp đẽ và có nhiều niềm vui trong cuộc sống, và đặc biệt là gặt hái được nhiều thành công. Thay mặt Đảng, Chính phủ, các vị bộ trưởng và toàn thể nhân dân Việt Nam cùng hơn 8 tỷ nhân dân trên thế giới, chúc mừng sinh nhật ạ !! ♥️';
+    var string = 'Dear darling, chúc mei có tuổi 20 thật ý nghĩa và mãi luôn xinh đẹp. Cố gắng lấy được thật nhiều học bổng nhá 💪 và cũng đừng cố gắng quá !. Thay mặt Đảng, Chính phủ, các vị bộ trưởng và toàn thể nhân dân Việt Nam cùng hơn 8 tỷ nhân dân trên thế giới, wishing you a day that is as special as you are ♥️';
     var str = string.split('');
     function animate()
     {
@@ -632,7 +632,7 @@ function LaunchRocket()
     document.querySelector('.dream-msg').onfocus = function () {
         document.body.style.height = window.innerHeight+'px';
     }
-    moonBtn.onclick = function()
+    moonBtn.ontouchstart = function()
     {
         setTimeout(() => {
             dreamMsg.style.right = '168px'
@@ -1111,6 +1111,15 @@ function bts()
         var running = setTimeout(animate,80);
     }
     setTimeout(animate,2000);
+    document.getElementById("bts-video").addEventListener("playing", event => {
+        const player = document.getElementById("bts-video");
+        if (player.requestFullscreen) 
+            player.requestFullscreen();
+        else if (player.webkitRequestFullscreen) 
+            player.webkitRequestFullscreen();
+        else if (player.msRequestFullScreen) 
+          player.msRequestFullScreen();
+    })
 }
 // bts();
 function sendBtn()

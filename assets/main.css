@@ -685,7 +685,7 @@ and (-webkit-device-pixel-ratio: 2){
         position: absolute;
         width: 173px;
         font-size: 21px;
-        height: 271px;
+        min-height: 270px;
         top: 292px;
         left: 25px;
         color: #582208;
