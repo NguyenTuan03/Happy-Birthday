@@ -126,6 +126,9 @@ function formvalidate()
             opacity:1,
             height:150
         })   
+        document.querySelector('.form-content').onfocus = function () {
+            document.body.style.height = window.innerHeight+'px';
+        }
         if (document.querySelector('.form'))
         {
             document.querySelector('.form').onsubmit = function(e)
