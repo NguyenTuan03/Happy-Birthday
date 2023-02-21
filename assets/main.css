@@ -45,7 +45,7 @@ and (-webkit-device-pixel-ratio: 3){
     }
     .btn-note {
         position: absolute;
-        bottom: 100px;
+        bottom: 110px;
         color: #dfcd52;
         padding: 0 20px;
         text-align: center;
@@ -64,7 +64,7 @@ and (-webkit-device-pixel-ratio: 3){
         z-index: 1;
         left: 50%;
         transform: translateX(-50%) rotate(90deg);
-        bottom: -50px;
+        top: 100%;
         text-align: center;
     }
     .intro {
