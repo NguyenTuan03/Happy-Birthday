@@ -426,7 +426,7 @@ function birthdayCard()
                 document.querySelector('.birthday-heart').style.display = 'block';
             })
     var birthdayText = document.querySelector('.birthday-text');
-    var string = 'Dear darling, chúc mei có tuổi 20 thật ý nghĩa và mãi luôn xinh đẹp❤️. Thay mặt Đảng, Chính phủ, các vị bộ trưởng và toàn thể nhân dân Việt Nam cùng hơn 8 tỷ nhân dân trên thế giới, wishing you a day that is as special as you are ♥️';
+    var string = 'Dear darling, chúc mei có tuổi 20 thật ý nghĩa, luôn có nhiều niềm vui và nhớ là phải ăn thật nhiều vô nhe 💪. Thay mặt Đảng, Chính phủ, các vị bộ trưởng và toàn thể nhân dân Việt Nam cùng hơn 8 tỷ nhân dân trên thế giới, wishing you a day that is as special as you are ♥️';
     var str = string.split('');
     function animate()
     {
