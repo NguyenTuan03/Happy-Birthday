@@ -1387,12 +1387,13 @@ and (-webkit-device-pixel-ratio: 2){
     }
     .moon-btn {
         position: absolute;
-        top: 16px;
-        width: 58px;
-        height: 20px;
+        top: 24px;
+        width: 70px;
+        height: 30px;
+        line-height: 30px;
         background: #d9a665;
         z-index: 1;
-        left: 49px;
+        left: 45px;
         border-radius: 10px;
         text-align: center;
         color: #e4dedc;
