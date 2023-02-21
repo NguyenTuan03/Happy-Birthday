@@ -1132,6 +1132,7 @@ function sendBtn()
     btn.addEventListener("touchstart", () => {
         content.style.display = 'block';
         audio.play();
+        document.querySelector('.btn-note').style.display = 'none';
         btn.style.display = 'none';
         btn.style.animation = 'Fade 0.5s ease-in forwards'
         sleep(28000)
